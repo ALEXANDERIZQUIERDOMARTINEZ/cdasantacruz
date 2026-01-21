@@ -807,257 +807,110 @@
 
         /* Services Section */
         .service-card {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 250, 250, 0.9) 100%);
-            backdrop-filter: blur(20px);
-            border-radius: 28px;
-            padding: 40px 32px;
+            background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+            border-radius: 20px;
+            padding: 48px 36px;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.1);
-            border: 2px solid transparent;
-            background-clip: padding-box;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             position: relative;
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
             min-height: 420px;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 28px;
-            padding: 2px;
-            background: linear-gradient(135deg, #dc2626, #f59e0b, #10b981, #3b82f6, #8b5cf6);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(220, 38, 38, 0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.6s ease;
         }
 
         .service-card:hover {
-            box-shadow: 0 30px 80px rgba(220, 38, 38, 0.2), 0 0 30px rgba(220, 38, 38, 0.1);
-            transform: translateY(-20px) scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.15),
+                        0 10px 10px -5px rgba(220, 38, 38, 0.08);
+            transform: translateY(-8px);
             border-color: rgba(220, 38, 38, 0.1);
         }
 
-        .service-card:hover::before {
-            opacity: 0.6;
-            animation: rotate-gradient 3s linear infinite;
-        }
-
-        .service-card:hover::after {
-            opacity: 1;
-        }
-
-        @keyframes rotate-gradient {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         .service-icon {
-            width: 96px;
-            height: 96px;
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f97316 100%);
-            border-radius: 28px;
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 28px;
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4),
-                        0 0 0 8px rgba(220, 38, 38, 0.1),
-                        inset 0 -5px 15px rgba(0, 0, 0, 0.2),
-                        inset 0 5px 15px rgba(255, 255, 255, 0.3);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.25);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             color: white;
-            font-size: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-icon::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 32px;
-            background: linear-gradient(135deg, #dc2626, #f59e0b, #10b981);
-            opacity: 0;
-            filter: blur(12px);
-            transition: opacity 0.6s ease;
-            z-index: -1;
+            font-size: 36px;
         }
 
         .service-card:hover .service-icon {
-            transform: rotate(360deg) scale(1.15);
-            box-shadow: 0 20px 60px rgba(220, 38, 38, 0.6),
-                        0 0 0 12px rgba(220, 38, 38, 0.15),
-                        inset 0 -5px 20px rgba(0, 0, 0, 0.3),
-                        inset 0 5px 20px rgba(255, 255, 255, 0.4);
-            animation: pulse-icon 1.5s ease-in-out infinite;
-        }
-
-        .service-card:hover .service-icon::before {
-            opacity: 0.8;
-            animation: pulse-glow 1.5s ease-in-out infinite;
-        }
-
-        @keyframes pulse-icon {
-            0%, 100% {
-                transform: rotate(360deg) scale(1.15);
-            }
-            50% {
-                transform: rotate(360deg) scale(1.2);
-            }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% {
-                opacity: 0.6;
-            }
-            50% {
-                opacity: 1;
-            }
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.35);
         }
 
         .service-title {
             font-size: 22px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #111827 0%, #374151 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 700;
+            color: #1f2937;
             margin-bottom: 16px;
-            letter-spacing: -0.5px;
-            transition: all 0.3s ease;
+            letter-spacing: -0.3px;
+            transition: color 0.3s ease;
         }
 
         .service-card:hover .service-title {
-            background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transform: scale(1.05);
+            color: #dc2626;
         }
 
         .service-description {
             color: #6b7280;
-            font-size: 14px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.7;
             margin-bottom: auto;
             text-align: center;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: color 0.3s ease;
-        }
-
-        .service-card:hover .service-description {
-            color: #374151;
         }
 
         .service-button {
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f97316 100%);
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
             color: white;
-            padding: 16px 32px;
-            border-radius: 16px;
-            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
             border: none;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3),
-                        0 0 0 0 rgba(220, 38, 38, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
             font-size: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            min-height: 56px;
-            text-transform: none;
-            letter-spacing: 0.3px;
+            gap: 8px;
+            min-height: 52px;
             white-space: nowrap;
             width: 100%;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .service-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
-        }
-
-        .service-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .service-button::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #f97316 0%, #ef4444 50%, #dc2626 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: -1;
         }
 
         .service-button:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.5),
-                        0 0 0 8px rgba(220, 38, 38, 0.1),
-                        0 0 30px rgba(220, 38, 38, 0.3);
-        }
-
-        .service-button:hover::after {
-            opacity: 1;
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
         }
 
         .service-button:active {
-            transform: translateY(-2px) scale(0.98);
+            transform: translateY(0);
         }
 
         .service-button i {
-            font-size: 18px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            z-index: 2;
+            font-size: 16px;
+            transition: transform 0.3s ease;
         }
 
         .service-button:hover i {
-            transform: translateX(4px) scale(1.2);
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+            transform: translateX(3px);
         }
 
         .service-actions {
@@ -1068,38 +921,17 @@
         }
 
         .service-divider {
-            width: 60px;
-            height: 5px;
-            background: linear-gradient(90deg, #dc2626 0%, #ef4444 50%, #f97316 100%);
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
             margin: 20px auto 0;
-            border-radius: 10px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-divider::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-            animation: shine 2s infinite;
-        }
-
-        @keyframes shine {
-            0% {
-                left: -100%;
-            }
-            100% {
-                left: 100%;
-            }
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         .service-card:hover .service-divider {
-            width: 80px;
-            box-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+            width: 70px;
+            background: linear-gradient(90deg, #b91c1c 0%, #dc2626 100%);
         }
 
         /* Mobile Menu */
