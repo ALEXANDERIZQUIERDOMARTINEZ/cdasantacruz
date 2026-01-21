@@ -805,7 +805,7 @@
             text-align: justify;
         }
 
-        /* Services Section - High-Fidelity Dribbble Style */
+        /* Services Section - Consistent with About Section */
         .service-card {
             background: #ffffff;
             border-radius: 20px;
@@ -830,37 +830,38 @@
         .service-icon-container {
             width: 64px;
             height: 64px;
-            background: rgba(220, 38, 38, 0.08);
+            background: linear-gradient(to bottom right, #dc2626, #b91c1c);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3),
+                        0 2px 4px -1px rgba(220, 38, 38, 0.2);
             transition: all 0.3s ease;
         }
 
         .service-icon-container i {
             font-size: 28px;
-            font-weight: 300;
-            color: #dc2626;
+            color: #ffffff;
         }
 
         .service-card:hover .service-icon-container {
-            background: rgba(220, 38, 38, 0.12);
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.4),
+                        0 4px 6px -2px rgba(220, 38, 38, 0.3);
         }
 
         .service-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 700;
             color: #111827;
             margin-bottom: 12px;
-            letter-spacing: -0.02em;
         }
 
         .service-description {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: #6b7280;
             font-size: 15px;
             line-height: 1.6;
@@ -870,7 +871,7 @@
         }
 
         .service-link {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: #dc2626;
             font-size: 15px;
             font-weight: 500;
@@ -1673,14 +1674,21 @@
     <!-- Services Section -->
     <section id="servicios" class="py-24" style="background-color: #F8F9FA;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">Nuestros Servicios</h2>
-                <p class="text-lg text-gray-600 max-w-2xl" style="font-family: 'Inter', sans-serif;">
+            <div class="text-center mb-16">
+                <div class="section-header-icon">
+                    <i class="fas fa-cogs text-white text-3xl"></i>
+                </div>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <div class="section-divider"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-6">
                     Ofrecemos servicios completos de diagnóstico automotriz con la más alta tecnología y personal especializado
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Triangular Layout: 2 cards top, 3 cards bottom -->
+            <div class="max-w-5xl mx-auto space-y-6">
+                <!-- First row: 2 cards -->
+                <div class="grid md:grid-cols-2 gap-6">
                 <div class="service-card">
                     <div class="service-icon-container">
                         <i class="fas fa-wrench"></i>
@@ -1712,52 +1720,56 @@
                         </button>
                     </div>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon-container">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 class="service-title">Seguros Todo Riesgo</h3>
-                    <p class="service-description">
-                        Protección completa para tu vehículo. Cobertura integral contra daños, robo, responsabilidad civil y más.
-                    </p>
-                    <div class="service-actions">
-                        <button onclick="showServiceDetails('seguros')" class="service-link">
-                            Más información
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon-container">
-                        <i class="fas fa-truck"></i>
+                <!-- Second row: 3 cards -->
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="service-title">Seguros Todo Riesgo</h3>
+                        <p class="service-description">
+                            Protección completa para tu vehículo. Cobertura integral contra daños, robo, responsabilidad civil y más.
+                        </p>
+                        <div class="service-actions">
+                            <button onclick="showServiceDetails('seguros')" class="service-link">
+                                Más información
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Servicio de Grúas</h3>
-                    <p class="service-description">
-                        Servicio de grúa 24/7 para emergencias vehiculares. Transporte seguro y profesional de tu vehículo cuando más lo necesitas.
-                    </p>
-                    <div class="service-actions">
-                        <button onclick="showServiceDetails('gruas')" class="service-link">
-                            Más información
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
 
-                <div class="service-card">
-                    <div class="service-icon-container">
-                        <i class="fas fa-file-alt"></i>
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="service-title">Servicio de Grúas</h3>
+                        <p class="service-description">
+                            Servicio de grúa 24/7 para emergencias vehiculares. Transporte seguro y profesional de tu vehículo cuando más lo necesitas.
+                        </p>
+                        <div class="service-actions">
+                            <button onclick="showServiceDetails('gruas')" class="service-link">
+                                Más información
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
                     </div>
-                    <h3 class="service-title">Trámites Vehiculares</h3>
-                    <p class="service-description">
-                        Gestión completa de documentación vehicular. Renovaciones, transferencias, duplicados y más trámites oficiales.
-                    </p>
-                    <div class="service-actions">
-                        <button onclick="showServiceDetails('tramites')" class="service-link">
-                            Más información
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
+
+                    <div class="service-card">
+                        <div class="service-icon-container">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="service-title">Trámites Vehiculares</h3>
+                        <p class="service-description">
+                            Gestión completa de documentación vehicular. Renovaciones, transferencias, duplicados y más trámites oficiales.
+                        </p>
+                        <div class="service-actions">
+                            <button onclick="showServiceDetails('tramites')" class="service-link">
+                                Más información
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
