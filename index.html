@@ -805,133 +805,101 @@
             text-align: justify;
         }
 
-        /* Services Section */
+        /* Services Section - High-Fidelity Dribbble Style */
         .service-card {
-            background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+            background: #ffffff;
             border-radius: 20px;
-            padding: 48px 36px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                        0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            text-align: left;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06),
+                        0 1px 2px 0 rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
-            min-height: 420px;
         }
 
         .service-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.15),
-                        0 10px 10px -5px rgba(220, 38, 38, 0.08);
-            transform: translateY(-8px);
-            border-color: rgba(220, 38, 38, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08),
+                        0 4px 6px -2px rgba(0, 0, 0, 0.04);
+            transform: translateY(-4px);
         }
 
-        .service-icon {
-            width: 88px;
-            height: 88px;
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
-            border-radius: 20px;
+        .service-icon-container {
+            width: 64px;
+            height: 64px;
+            background: rgba(220, 38, 38, 0.08);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 24px;
-            box-shadow: 0 10px 20px rgba(220, 38, 38, 0.25);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            color: white;
-            font-size: 36px;
-        }
-
-        .service-card:hover .service-icon {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.35);
-        }
-
-        .service-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 16px;
-            letter-spacing: -0.3px;
-            transition: color 0.3s ease;
-        }
-
-        .service-card:hover .service-title {
-            color: #dc2626;
-        }
-
-        .service-description {
-            color: #6b7280;
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: auto;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .service-button {
-            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
-            color: white;
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            min-height: 52px;
-            white-space: nowrap;
-            width: 100%;
-        }
-
-        .service-button:hover {
-            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
-        }
-
-        .service-button:active {
-            transform: translateY(0);
-        }
-
-        .service-button i {
-            font-size: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .service-button:hover i {
-            transform: translateX(3px);
-        }
-
-        .service-actions {
-            display: flex;
-            justify-content: center;
-            margin-top: 24px;
-            width: 100%;
-        }
-
-        .service-divider {
-            width: 50px;
-            height: 4px;
-            background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
-            margin: 20px auto 0;
-            border-radius: 2px;
+            margin-bottom: 24px;
             transition: all 0.3s ease;
         }
 
-        .service-card:hover .service-divider {
-            width: 70px;
-            background: linear-gradient(90deg, #b91c1c 0%, #dc2626 100%);
+        .service-icon-container i {
+            font-size: 28px;
+            font-weight: 300;
+            color: #dc2626;
+        }
+
+        .service-card:hover .service-icon-container {
+            background: rgba(220, 38, 38, 0.12);
+            transform: scale(1.05);
+        }
+
+        .service-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .service-description {
+            font-family: 'Inter', sans-serif;
+            color: #6b7280;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            font-family: 'Inter', sans-serif;
+            color: #dc2626;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            background: none;
+            padding: 0;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        .service-link i {
+            font-size: 14px;
+            transition: transform 0.2s ease;
+        }
+
+        .service-link:hover i {
+            transform: translateX(2px);
+        }
+
+        .service-actions {
+            margin-top: auto;
         }
 
         /* Mobile Menu */
@@ -1703,18 +1671,18 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servicios" class="py-20 bg-white">
+    <section id="servicios" class="py-24" style="background-color: #F8F9FA;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div class="mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" style="font-family: 'Inter', sans-serif; letter-spacing: -0.02em;">Nuestros Servicios</h2>
+                <p class="text-lg text-gray-600 max-w-2xl" style="font-family: 'Inter', sans-serif;">
                     Ofrecemos servicios completos de diagnóstico automotriz con la más alta tecnología y personal especializado
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-icon-container">
                         <i class="fas fa-wrench"></i>
                     </div>
                     <h3 class="service-title">Técnico Mecánica</h3>
@@ -1722,16 +1690,15 @@
                         Revisión técnico-mecánica completa de tu vehículo. Diagnóstico profesional con certificación oficial para garantizar la seguridad vial.
                     </p>
                     <div class="service-actions">
-                        <button onclick="showServiceDetails('tecnico-mecanica')" class="service-button">
-                            <i class="fas fa-info-circle"></i>
-                            Más Información
+                        <button onclick="showServiceDetails('tecnico-mecanica')" class="service-link">
+                            Más información
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div class="service-divider"></div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-icon-container">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="service-title">SOAT</h3>
@@ -1739,16 +1706,15 @@
                         Seguro Obligatorio de Accidentes de Tránsito. Protección obligatoria para circular legalmente en territorio nacional.
                     </p>
                     <div class="service-actions">
-                        <button onclick="showServiceDetails('soat')" class="service-button">
-                            <i class="fas fa-info-circle"></i>
-                            Más Información
+                        <button onclick="showServiceDetails('soat')" class="service-link">
+                            Más información
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div class="service-divider"></div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-icon-container">
                         <i class="fas fa-car"></i>
                     </div>
                     <h3 class="service-title">Seguros Todo Riesgo</h3>
@@ -1756,16 +1722,15 @@
                         Protección completa para tu vehículo. Cobertura integral contra daños, robo, responsabilidad civil y más.
                     </p>
                     <div class="service-actions">
-                        <button onclick="showServiceDetails('seguros')" class="service-button">
-                            <i class="fas fa-info-circle"></i>
-                            Más Información
+                        <button onclick="showServiceDetails('seguros')" class="service-link">
+                            Más información
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div class="service-divider"></div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-icon-container">
                         <i class="fas fa-truck"></i>
                     </div>
                     <h3 class="service-title">Servicio de Grúas</h3>
@@ -1773,16 +1738,15 @@
                         Servicio de grúa 24/7 para emergencias vehiculares. Transporte seguro y profesional de tu vehículo cuando más lo necesitas.
                     </p>
                     <div class="service-actions">
-                        <button onclick="showServiceDetails('gruas')" class="service-button">
-                            <i class="fas fa-info-circle"></i>
-                            Más Información
+                        <button onclick="showServiceDetails('gruas')" class="service-link">
+                            Más información
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div class="service-divider"></div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
+                    <div class="service-icon-container">
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3 class="service-title">Trámites Vehiculares</h3>
@@ -1790,12 +1754,11 @@
                         Gestión completa de documentación vehicular. Renovaciones, transferencias, duplicados y más trámites oficiales.
                     </p>
                     <div class="service-actions">
-                        <button onclick="showServiceDetails('tramites')" class="service-button">
-                            <i class="fas fa-info-circle"></i>
-                            Más Información
+                        <button onclick="showServiceDetails('tramites')" class="service-link">
+                            Más información
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
-                    <div class="service-divider"></div>
                 </div>
             </div>
         </div>
