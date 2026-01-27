@@ -3033,14 +3033,10 @@
 
         // Close service modal function
         function closeServiceModal() {
-            console.log('Closing service modal');
             const modal = document.getElementById('serviceModal');
             if (modal) {
                 modal.remove();
                 document.body.style.overflow = 'auto';
-                console.log('Modal closed successfully');
-            } else {
-                console.log('Modal not found');
             }
         }
 
