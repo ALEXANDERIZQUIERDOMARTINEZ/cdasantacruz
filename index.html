@@ -327,6 +327,11 @@
             height: 50px;
         }
 
+        /* Contenedor de foto: degradado de respaldo si la imagen no carga */
+        .photo {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 60%, #7f1d1d 100%);
+        }
+
         /* Preguntas frecuentes */
         .faq summary {
             list-style: none;
@@ -574,50 +579,68 @@
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <!-- RTM destacado -->
-                    <article class="lg:row-span-2 bg-gray-900 text-white rounded-2xl p-7 flex flex-col">
-                        <div class="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center mb-5">
-                            <i class="fas fa-wrench text-lg"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Revisión Técnico-Mecánica</h3>
-                        <p class="justify text-gray-300 mb-6">Revisión técnico-mecánica completa de tu vehículo. Diagnóstico profesional con certificación oficial para garantizar la seguridad vial.</p>
-                        <ul class="space-y-3 text-[15px] text-gray-200 mb-8">
+                    <article class="lg:row-span-2 relative isolate overflow-hidden rounded-2xl text-white flex flex-col justify-end min-h-[460px] p-7 photo">
+                        <img src="https://unsplash.com/photos/Wr1vbV1i-Qc/download?w=1200" alt="Rueda de un vehículo con el disco y la mordaza de freno a la vista" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="absolute inset-0 -z-10 w-full h-full object-cover">
+                        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-950 via-gray-900/80 to-gray-900/10"></div>
+                        <span class="w-12 h-12 rounded-xl bg-red-600 flex items-center justify-center mb-5"><i class="fas fa-wrench text-lg"></i></span>
+                        <h3 class="text-2xl font-bold mb-4">Revisión Técnico-Mecánica</h3>
+                        <ul class="space-y-2.5 text-[15px] text-gray-200 mb-7">
                             <li class="flex gap-3"><i class="fas fa-check text-red-500 mt-1"></i>Frenos, luces, llantas y suspensión</li>
                             <li class="flex gap-3"><i class="fas fa-check text-red-500 mt-1"></i>Emisiones contaminantes</li>
-                            <li class="flex gap-3"><i class="fas fa-check text-red-500 mt-1"></i>Certificado según estándares oficiales</li>
-                            <li class="flex gap-3"><i class="fas fa-check text-red-500 mt-1"></i>Duración aproximada: 45-60 minutos</li>
+                            <li class="flex gap-3"><i class="fas fa-check text-red-500 mt-1"></i>Certificado oficial en 45-60 minutos</li>
                         </ul>
-                        <div class="mt-auto flex flex-wrap gap-3">
+                        <div class="flex flex-wrap gap-3">
                             <a href="#tarifas" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-[15px] font-semibold px-4 py-2.5 rounded-lg transition-colors">Ver tarifas</a>
-                            <button type="button" data-service="tecnico-mecanica" class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-[15px] font-semibold px-4 py-2.5 rounded-lg transition-colors">Más información</button>
+                            <button type="button" data-service="tecnico-mecanica" class="inline-flex items-center gap-2 border border-white/40 hover:border-white text-[15px] font-semibold px-4 py-2.5 rounded-lg transition-colors">Más información</button>
                         </div>
                     </article>
 
-                    <article class="border border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-md transition">
-                        <div class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4"><i class="fas fa-shield-halved"></i></div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">SOAT</h3>
-                        <p class="justify text-[15px] text-gray-600 mb-4">Seguro Obligatorio de Accidentes de Tránsito. Protección obligatoria para circular legalmente en territorio nacional.</p>
-                        <button type="button" data-service="soat" class="text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                    <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
+                        <div class="photo relative h-44 overflow-hidden">
+                            <img src="https://unsplash.com/photos/aNzWFLYyC70/download?w=900" alt="Carros circulando por una autopista" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute left-4 bottom-4 w-11 h-11 rounded-xl bg-white text-red-600 shadow-md flex items-center justify-center"><i class="fas fa-shield-halved"></i></span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">SOAT</h3>
+                            <p class="text-[15px] text-gray-600 mb-4">Seguro obligatorio para circular legalmente.</p>
+                            <button type="button" data-service="soat" class="mt-auto self-start text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                        </div>
                     </article>
 
-                    <article class="border border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-md transition">
-                        <div class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4"><i class="fas fa-car"></i></div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Seguros Todo Riesgo</h3>
-                        <p class="justify text-[15px] text-gray-600 mb-4">Protección completa para tu vehículo. Cobertura integral contra daños, robo, responsabilidad civil y más.</p>
-                        <button type="button" data-service="seguros" class="text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                    <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
+                        <div class="photo relative h-44 overflow-hidden">
+                            <img src="https://unsplash.com/photos/RL5ThSy5LR0/download?w=900" alt="Persona sosteniendo la llave de un carro" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute left-4 bottom-4 w-11 h-11 rounded-xl bg-white text-red-600 shadow-md flex items-center justify-center"><i class="fas fa-car"></i></span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Seguros Todo Riesgo</h3>
+                            <p class="text-[15px] text-gray-600 mb-4">Cobertura contra daños, robo y responsabilidad civil.</p>
+                            <button type="button" data-service="seguros" class="mt-auto self-start text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                        </div>
                     </article>
 
-                    <article class="border border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-md transition">
-                        <div class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4"><i class="fas fa-truck-pickup"></i></div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Servicio de Grúas 24/7</h3>
-                        <p class="justify text-[15px] text-gray-600 mb-4">Servicio de grúa para emergencias vehiculares. Transporte seguro y profesional de tu vehículo cuando más lo necesitas.</p>
-                        <button type="button" data-service="gruas" class="text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                    <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
+                        <div class="photo relative h-44 overflow-hidden">
+                            <img src="https://unsplash.com/photos/HZ_6ktzQWZ0/download?w=900" alt="Grúa remolcando un carro en la carretera" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute left-4 bottom-4 w-11 h-11 rounded-xl bg-white text-red-600 shadow-md flex items-center justify-center"><i class="fas fa-truck-pickup"></i></span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Servicio de Grúas 24/7</h3>
+                            <p class="text-[15px] text-gray-600 mb-4">Traslado seguro de tu vehículo cuando lo necesitas.</p>
+                            <button type="button" data-service="gruas" class="mt-auto self-start text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                        </div>
                     </article>
 
-                    <article class="border border-gray-200 rounded-2xl p-6 hover:border-gray-300 hover:shadow-md transition">
-                        <div class="w-11 h-11 rounded-xl bg-red-50 text-red-600 flex items-center justify-center mb-4"><i class="fas fa-file-lines"></i></div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Trámites Vehiculares</h3>
-                        <p class="justify text-[15px] text-gray-600 mb-4">Gestión completa de documentación vehicular. Renovaciones, transferencias, duplicados y más trámites oficiales.</p>
-                        <button type="button" data-service="tramites" class="text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                    <article class="group bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-0.5 transition duration-300">
+                        <div class="photo relative h-44 overflow-hidden">
+                            <img src="https://unsplash.com/photos/QI6NLgN5XnM/download?w=900" alt="Persona firmando un documento" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute left-4 bottom-4 w-11 h-11 rounded-xl bg-white text-red-600 shadow-md flex items-center justify-center"><i class="fas fa-file-lines"></i></span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Trámites Vehiculares</h3>
+                            <p class="text-[15px] text-gray-600 mb-4">Renovaciones, transferencias, duplicados y más.</p>
+                            <button type="button" data-service="tramites" class="mt-auto self-start text-[15px] font-semibold text-red-600 hover:text-red-700">Más información <i class="fas fa-arrow-right text-xs ml-1"></i></button>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -706,6 +729,37 @@
                 <p class="text-sm text-gray-500 mt-6">¿Necesitas varios servicios o tienes otro tipo de vehículo?
                     <button type="button" data-open="quotationModal" class="font-semibold text-red-600 hover:text-red-700">Solicita una cotización</button>
                 </p>
+            </div>
+        </section>
+
+        <!-- Franja de fotos -->
+        <section class="py-16 lg:py-20 bg-gray-950 text-white" aria-label="Seguridad en cada detalle">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                    <div>
+                        <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-500 mb-2">Revisión completa</p>
+                        <h2 class="text-3xl lg:text-4xl font-bold">Seguridad en cada detalle</h2>
+                    </div>
+                    <a href="#agendar" class="self-start md:self-auto inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 font-semibold px-5 py-3 rounded-lg transition-colors"><i class="fas fa-calendar-check"></i>Agendar cita</a>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+                    <figure class="photo group relative col-span-2 lg:col-span-1 lg:row-span-2 h-64 lg:h-full min-h-[256px] rounded-2xl overflow-hidden">
+                        <img src="https://unsplash.com/photos/XP8o9_Arwqg/download?w=1200" alt="Técnico revisando el motor de un vehículo" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent font-semibold"><i class="fas fa-gears text-red-500 mr-2"></i>Diagnóstico preciso</figcaption>
+                    </figure>
+                    <figure class="photo group relative h-40 lg:h-56 rounded-2xl overflow-hidden">
+                        <img src="https://unsplash.com/photos/Hv_gKPOXmwE/download?w=900" alt="Vehículo elevado para inspección" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-sm font-semibold"><i class="fas fa-car-burst text-red-500 mr-2"></i>Inspección inferior</figcaption>
+                    </figure>
+                    <figure class="photo group relative h-40 lg:h-56 rounded-2xl overflow-hidden">
+                        <img src="https://unsplash.com/photos/Wr1vbV1i-Qc/download?w=900" alt="Detalle del sistema de frenos de una rueda" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-sm font-semibold"><i class="fas fa-circle-stop text-red-500 mr-2"></i>Frenos y llantas</figcaption>
+                    </figure>
+                    <figure class="photo group relative col-span-2 h-40 lg:h-56 rounded-2xl overflow-hidden">
+                        <img src="banner.jpg" alt="Técnico de CDA Santa Cruz trabajando en un vehículo" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <figcaption class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-sm font-semibold"><i class="fas fa-user-gear text-red-500 mr-2"></i>Personal certificado</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -1011,7 +1065,7 @@
         <div class="border-t border-white/10">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col md:flex-row gap-2 md:items-center md:justify-between text-[13px]">
                 <p>© 2026 CDA Santa Cruz S.A.S · Organismo de Inspección Tipo A · ISO/IEC 17020:2012</p>
-                <p>Desarrollado por <a href="https://www.instagram.com/amei_group/" target="_blank" rel="noopener" class="text-gray-300 hover:text-white">amei_group</a></p>
+                <p>Fotos ilustrativas: <a href="https://unsplash.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-white">Unsplash</a> · Desarrollado por <a href="https://www.instagram.com/amei_group/" target="_blank" rel="noopener" class="text-gray-300 hover:text-white">amei_group</a></p>
             </div>
         </div>
     </footer>
