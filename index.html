@@ -36,7 +36,7 @@
     <link rel="shortcut icon" type="image/png" href="logocda.png">
     <link rel="apple-touch-icon" href="logocda.png">
     <link rel="stylesheet" href="tailwind.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -1137,6 +1137,343 @@
         .dark-mode .border-gray-100 {
             border-color: #374151 !important;
         }
+        /* =========================================================
+           Sistema de diseño
+           Tipografía: Poppins para títulos, Inter para texto.
+           Un solo rojo de acento, superficies blancas con borde fino,
+           sombras suaves y movimientos mínimos.
+           ========================================================= */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            color: var(--gray-700);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        h1, h2, h3, h4,
+        .logo-text,
+        .section-title,
+        .form-title {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            line-height: 1.65;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--red-primary);
+            outline-offset: 2px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+        }
+
+        /* Marca */
+        .logo-text {
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            color: var(--red-primary);
+            letter-spacing: -0.01em;
+        }
+
+        /* Encabezado de sección */
+        .section-head {
+            max-width: 720px;
+            margin: 0 auto 56px;
+            text-align: center;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--red-primary);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3.6vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--gray-900);
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            margin-bottom: 16px;
+        }
+
+        .section-lead {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+        }
+
+        .section-head--dark .section-title {
+            color: var(--white);
+        }
+
+        .section-head--dark .section-lead {
+            color: var(--gray-300);
+        }
+
+        .section-head--dark .section-eyebrow {
+            color: var(--red-secondary);
+        }
+
+        /* Hero */
+        .hero-bg h1 {
+            font-size: clamp(2.5rem, 4.4vw, 3.75rem);
+            font-weight: 700;
+            line-height: 1.08;
+        }
+
+        .hero-bg h1 + p,
+        .hero-bg .mb-8 + p {
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 560px;
+        }
+
+        .btn-modern {
+            background: var(--red-primary);
+            border: 0;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.25);
+        }
+
+        .btn-modern:hover {
+            background: var(--red-dark);
+            color: var(--white);
+            box-shadow: 0 10px 24px rgba(220, 38, 38, 0.3);
+            transform: none;
+        }
+
+        /* Formulario del hero */
+        .hero-form {
+            background: var(--white);
+            backdrop-filter: none;
+            border: 0;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-form:hover {
+            transform: none;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-header-icon {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 16px;
+            background: var(--red-primary);
+            box-shadow: none;
+            animation: none;
+        }
+
+        .form-header-icon i {
+            font-size: 20px;
+        }
+
+        .form-title {
+            font-size: 24px;
+            color: var(--gray-900);
+            background: none;
+            -webkit-text-fill-color: currentColor;
+            margin-bottom: 4px;
+        }
+
+        .form-subtitle {
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+
+        .form-divider {
+            display: none;
+        }
+
+        /* Campos: borde fino, etiqueta que sube al borde al escribir */
+        .floating-label {
+            margin-bottom: 18px;
+        }
+
+        .input-modern {
+            padding: 14px 44px 14px 14px;
+            background: var(--white);
+            backdrop-filter: none;
+            border: 1px solid var(--gray-300);
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--gray-900);
+            box-shadow: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .input-modern:hover {
+            background: var(--white);
+            border-color: var(--gray-400);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .input-modern:focus {
+            background: var(--white);
+            border-color: var(--red-primary);
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+            transform: none;
+        }
+
+        .floating-label label {
+            left: 12px;
+            top: 14px;
+            padding: 0 4px;
+            font-size: 15px;
+            font-weight: 400;
+            color: var(--gray-500);
+            background: var(--white);
+            backdrop-filter: none;
+            border: 0;
+            border-radius: 4px;
+            transition: all 0.15s ease;
+        }
+
+        .floating-label input:focus + label,
+        .floating-label input:not(:placeholder-shown) + label,
+        .floating-label select:focus + label,
+        .floating-label select:not([value=""]) + label {
+            top: -9px;
+            transform: none;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray-600);
+            background: var(--white);
+            border: 0;
+        }
+
+        .floating-label input:focus + label,
+        .floating-label select:focus + label {
+            color: var(--red-primary);
+        }
+
+        .input-icon {
+            right: 14px;
+            font-size: 15px;
+        }
+
+        .floating-label:focus-within .input-icon {
+            color: var(--red-primary);
+            transform: translateY(-50%);
+        }
+
+        /* Botón de envío */
+        .submit-button {
+            background: var(--red-primary);
+            padding: 15px 24px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background: var(--red-dark);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .submit-button::before {
+            display: none;
+        }
+
+        /* Tarjetas y cifras */
+        .stats-card {
+            border: 1px solid var(--gray-200);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
+
+        .stats-card:hover {
+            transform: none;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .stats-number {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Fondos decorativos difuminados */
+        .bg-decoration-1,
+        .bg-decoration-2 {
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .section-head {
+                margin-bottom: 40px;
+            }
+
+            .hero-form {
+                padding: 24px;
+            }
+        }
+
+        /* Modo oscuro de los componentes nuevos */
+        .dark-mode .text-dark {
+            color: #e5e7eb;
+        }
+
+        .dark-mode .section-lead {
+            color: #9ca3af;
+        }
+
+        .dark-mode .hero-form {
+            background: #1f2937;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .dark-mode .input-modern,
+        .dark-mode .input-modern:hover,
+        .dark-mode .input-modern:focus {
+            background: #111827;
+            border: 1px solid #374151;
+            color: #f3f4f6;
+        }
+
+        .dark-mode .input-modern:focus {
+            border-color: var(--red-secondary);
+        }
+
+        .dark-mode .floating-label label,
+        .dark-mode .floating-label input:focus + label,
+        .dark-mode .floating-label input:not(:placeholder-shown) + label,
+        .dark-mode .floating-label select:focus + label,
+        .dark-mode .floating-label select:not([value=""]) + label {
+            color: #9ca3af;
+            background: #111827;
+            border: 0;
+        }
+
+        .dark-mode .floating-label input:focus + label,
+        .dark-mode .floating-label select:focus + label {
+            color: var(--red-secondary);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
     </style>
 
     <!-- Schema.org Structured Data (JSON-LD) -->
@@ -1317,19 +1654,19 @@
                             <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </button>
                         
-                        <a href="#" class="group relative w-7 h-7 bg-gray-800 rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
+                        <a href="#" aria-label="Instagram" class="group relative w-7 h-7 bg-gray-800 rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
                             <div class="absolute inset-0 bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
-                        <a href="#" class="group relative w-7 h-7 bg-gray-800 rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
+                        <a href="#" aria-label="Facebook" class="group relative w-7 h-7 bg-gray-800 rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                             <div class="absolute inset-0 bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
-                        <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
+                        <a href="#" aria-label="TikTok" class="group relative w-7 h-7 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center text-white transition-colors duration-300 overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                             </svg>
@@ -1426,7 +1763,7 @@
                 <div class="text-white pr-0 lg:pr-8">
                     <div class="mb-8">
                         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
-                            Revisión <span class="text-gradient bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Técnico-Mecánica</span>
+                            Revisión <span class="text-white lg:whitespace-nowrap">Técnico-Mecánica</span>
                         </h1>
                     </div>
                     <p class="text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed font-light max-w-none lg:max-w-2xl">
@@ -1525,15 +1862,10 @@
         <div class="bg-decoration-2"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <div class="section-header-icon">
-                    <i class="fas fa-users text-white text-3xl"></i>
-                </div>
+            <div class="section-head">
+                <span class="section-eyebrow">Quiénes somos</span>
                 <h2 class="section-title">Sobre Nosotros</h2>
-                <div class="section-divider"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-                    Centro de diagnóstico automotriz con tecnología de última generación.
-                </p>
+                <p class="section-lead">Centro de diagnóstico automotriz con tecnología de última generación.</p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-16 mb-20">
@@ -1564,7 +1896,7 @@
                 <div class="flex flex-col justify-center space-y-8">
                     <div class="space-y-8">
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-award text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1577,7 +1909,7 @@
                         </div>
                         
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-users text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1590,7 +1922,7 @@
                         </div>
                         
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-leaf text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1685,15 +2017,10 @@
     <!-- Services Section -->
     <section id="servicios" class="py-24" style="background-color: #F8F9FA;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="section-header-icon">
-                    <i class="fas fa-cogs text-white text-3xl"></i>
-                </div>
+            <div class="section-head">
+                <span class="section-eyebrow">Qué hacemos</span>
                 <h2 class="section-title">Nuestros Servicios</h2>
-                <div class="section-divider"></div>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto mt-6">
-                    Ofrecemos servicios completos de diagnóstico automotriz con la más alta tecnología y personal especializado
-                </p>
+                <p class="section-lead">Servicios completos de diagnóstico automotriz con la más alta tecnología y personal especializado.</p>
             </div>
 
             <!-- Triangular Layout: 2 cards top, 3 cards bottom -->
@@ -1791,19 +2118,10 @@
     <section id="financiacion" class="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Header -->
-            <div class="text-center mb-12 lg:mb-20">
-                <div class="inline-flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 bg-red-600 rounded-full mb-6 lg:mb-8 shadow-2xl">
-                    <i class="fas fa-wallet text-white text-2xl lg:text-4xl"></i>
-                </div>
-                <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent mb-4 lg:mb-6">
-                    Formas de Pago
-                </h2>
-                <div class="w-24 lg:w-40 h-1.5 lg:h-2 bg-red-600 mx-auto rounded-full mb-6 lg:mb-8"></div>
-                <p class="text-lg lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-                    Múltiples opciones para que pagues de la manera más conveniente. 
-                    <span class="font-semibold text-red-400">¡Tu comodidad es nuestra prioridad!</span>
-                </p>
+            <div class="section-head section-head--dark">
+                <span class="section-eyebrow">Financiación</span>
+                <h2 class="section-title">Formas de Pago</h2>
+                <p class="section-lead">Varias opciones para que pagues de la manera más conveniente para ti.</p>
             </div>
             
             <!-- Desktop Timeline (hidden on mobile) -->
@@ -2017,26 +2335,17 @@
         <!-- Background Decorations -->
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Header -->
-            <div class="text-center mb-20">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-red-600 to-red-700 rounded-3xl mb-8 shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-500">
-                    <i class="fas fa-headset text-white text-3xl"></i>
-                </div>
-                <h2 class="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6">
-                    Contáctanos
-                </h2>
-                <div class="w-32 h-1.5 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Estamos aquí para brindarte el mejor servicio de diagnóstico automotriz. 
-                    <span class="font-semibold text-red-600">¡Contáctanos ahora!</span>
-                </p>
+            <div class="section-head">
+                <span class="section-eyebrow">Contacto</span>
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="section-lead">Escríbenos, llámanos o visítanos. Te atendemos con gusto.</p>
             </div>
             
             <!-- Contact Information Cards Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-map-marker-alt text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Nuestra Ubicación</h4>
@@ -2048,9 +2357,9 @@
                     </div>
                 </div>
                 
-                <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 mx-auto mb-4">
                             <i class="fab fa-whatsapp text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">WhatsApp Directo</h4>
@@ -2062,9 +2371,9 @@
                     </div>
                 </div>
                 
-                <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-envelope text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Correo Electrónico</h4>
@@ -2075,9 +2384,9 @@
                     </div>
                 </div>
                 
-                <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-clock text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Horarios de Atención</h4>
@@ -2100,18 +2409,18 @@
             </div>
             
             <!-- Interactive Map - Full Width -->
-            <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 mb-16">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500 mb-16">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h3 class="text-3xl font-bold text-gray-900 mb-2">Encuéntranos Aquí</h3>
                         <p class="text-gray-600">Visítanos en nuestras modernas instalaciones</p>
                     </div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg">
                         <i class="fas fa-map-marked-alt text-white text-2xl"></i>
                     </div>
                 </div>
                 
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+                <div class="relative rounded-2xl overflow-hidden shadow-sm group">
                     <div class="absolute inset-0 bg-gradient-to-r from-red-600/10 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.99057455513!2d-75.857593!3d8.786954599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2f4db5f4906d%3A0xd29a710bdf01d87b!2sCDA%20SANTA%20CRUZ%20S.A.S!5e0!3m2!1ses-419!2sco!4v1792674613251!5m2!1ses-419!2sco" 
                             width="100%" 
@@ -2120,29 +2429,29 @@
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="strict-origin-when-cross-origin"
-                            class="transition-all duration-500 group-hover:scale-105">
+                            class="transition-all duration-500">
                     </iframe>
                 </div>
                 
                 <div class="mt-6 p-6 bg-gray-50 rounded-2xl border border-gray-200">
                     <div class="flex items-center justify-center space-x-4">
-                        <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+                        <div class="w-3 h-3 bg-red-600 rounded-full"></div>
                         <p class="text-gray-700 font-semibold text-center">
                             📍 Calle 78 Num 6 - 47, Barrio Sevilla - CDA SANTA CRUZ SAS
                         </p>
-                        <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+                        <div class="w-3 h-3 bg-red-600 rounded-full"></div>
                     </div>
                 </div>
             </div>
             
             <!-- Enhanced Contact Form - Full Width -->
-            <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-500">
                 <div class="flex items-center justify-between mb-8">
                     <div>
                         <h3 class="text-3xl font-bold text-gray-900 mb-2">Agenda tu Cita</h3>
                         <p class="text-gray-600">Completa el formulario y te contactaremos de inmediato</p>
                     </div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg">
                         <i class="fas fa-calendar-check text-white text-2xl"></i>
                     </div>
                 </div>
@@ -2219,7 +2528,7 @@
                         </div>
                     </div>
                     
-                    <button type="submit" class="w-full bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-4 px-8 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+                    <button type="submit" class="w-full bg-red-600 text-white py-4 px-8 rounded-2xl font-bold text-lg shadow-sm hover:shadow-lg transform transition-all duration-300 relative overflow-hidden group">
                         <div class="absolute inset-0 bg-gradient-to-r from-red-700 via-red-800 to-red-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative flex items-center justify-center space-x-3">
                             <i class="fab fa-whatsapp text-2xl"></i>
@@ -2252,7 +2561,7 @@
                     <div class="flex items-center mb-8">
                         <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-20 h-24 mr-6 object-contain">
                         <div>
-                            <div class="text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                            <div class="text-3xl font-bold text-white">
                                 CDA SANTA CRUZ S.A.S
                             </div>
                             <div class="text-red-400 font-semibold text-lg">Centro de Diagnóstico Automotor</div>
@@ -2266,7 +2575,7 @@
                     <!-- Contact Info Cards -->
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
+                            <div class="w-12 h-12 bg-red-600 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-map-marker-alt text-white"></i>
                             </div>
                             <div>
@@ -2352,14 +2661,14 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4 text-white">Síguenos</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="group w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors duration-300">
-                                <i class="fab fa-facebook-f text-white group-hover:scale-110 transition-transform"></i>
+                            <a href="#" aria-label="Facebook" class="group w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors duration-300">
+                                <i class="fab fa-facebook-f text-white transition-transform"></i>
                             </a>
-                            <a href="#" class="group w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors duration-300">
-                                <i class="fab fa-instagram text-white group-hover:scale-110 transition-transform"></i>
+                            <a href="#" aria-label="Instagram" class="group w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors duration-300">
+                                <i class="fab fa-instagram text-white transition-transform"></i>
                             </a>
                             <a href="https://wa.me/573008994671" target="_blank" class="group w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors duration-300">
-                                <i class="fab fa-whatsapp text-white group-hover:scale-110 transition-transform"></i>
+                                <i class="fab fa-whatsapp text-white transition-transform"></i>
                             </a>
                         </div>
                     </div>
@@ -2380,7 +2689,7 @@
 
                     <div class="flex items-center gap-6 text-sm">
                         <div class="flex items-center gap-2 text-green-400">
-                            <div class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
+                            <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
                             <span class="font-semibold whitespace-nowrap">Servicio Activo</span>
                         </div>
                         <div class="text-gray-400 whitespace-nowrap">
@@ -2938,7 +3247,7 @@
                                     <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 object-contain">
                                     <div>
                                         <h3 class="text-2xl font-bold text-gray-900">${service.title}</h3>
-                                        <div class="w-16 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mt-2"></div>
+                                        <div class="w-16 h-1 bg-red-600 rounded-full mt-2"></div>
                                     </div>
                                 </div>
                                 <button onclick="closeServiceModal()" class="text-gray-400 hover:text-gray-600 text-2xl">
@@ -3006,11 +3315,11 @@
                             
                             <!-- Action Buttons -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button onclick="openModal('quotationModal'); closeServiceModal();" class="bg-red-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+                                <button onclick="openModal('quotationModal'); closeServiceModal();" class="bg-red-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform duration-300">
                                     <i class="fas fa-calculator mr-2"></i>
                                     Solicitar Cotización
                                 </button>
-                                <a href="https://wa.me/573008994671?text=Hola, quiero información detallada sobre ${service.title}" target="_blank" class="bg-green-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-green-700 transition-colors text-center shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+                                <a href="https://wa.me/573008994671?text=Hola, quiero información detallada sobre ${service.title}" target="_blank" class="bg-green-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-green-700 transition-colors text-center shadow-lg hover:shadow-xl transform duration-300">
                                     <i class="fab fa-whatsapp mr-2"></i>
                                     Consultar por WhatsApp
                                 </a>
@@ -3077,7 +3386,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-bullseye text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Nuestra Misión</h2>
@@ -3138,7 +3447,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-eye text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Nuestra Visión 2030</h2>
@@ -3196,7 +3505,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-certificate text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Certificación ISO/IEC 17020:2012</h2>
