@@ -128,45 +128,203 @@
             }
         }
 
-        /* Campos de formulario */
-        .field-label {
+        /* Formularios: etiqueta flotante con ícono, fondo suave y foco rojo */
+        .ff {
+            position: relative;
+        }
+
+        .ff-input {
+            width: 100%;
+            height: 56px;
+            padding: 22px 14px 6px 44px;
+            font-size: 15px;
+            color: #111827;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            -webkit-appearance: none;
+            appearance: none;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+        }
+
+        .ff-input:hover {
+            border-color: #d1d5db;
+        }
+
+        .ff-input:focus {
+            outline: none;
+            background: #fff;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.12);
+        }
+
+        select.ff-input {
+            padding-right: 40px;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+        }
+
+        .ff-label {
+            position: absolute;
+            left: 44px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: #6b7280;
+            pointer-events: none;
+            transition: all 0.15s ease;
+        }
+
+        .ff-input:focus + .ff-label,
+        .ff-input:not(:placeholder-shown) + .ff-label,
+        select.ff-input + .ff-label,
+        input[type="date"].ff-input + .ff-label {
+            top: 16px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .ff-input:focus + .ff-label {
+            color: #dc2626;
+        }
+
+        .ff-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 15px;
+            color: #9ca3af;
+            pointer-events: none;
+            transition: color 0.15s ease;
+        }
+
+        .ff:focus-within .ff-icon {
+            color: #dc2626;
+        }
+
+        .ff-area .ff-input {
+            height: auto;
+            padding-top: 26px;
+            resize: none;
+        }
+
+        .ff-area .ff-label,
+        .ff-area .ff-icon {
+            top: 20px;
+        }
+
+        .ff-area .ff-input:focus + .ff-label,
+        .ff-area .ff-input:not(:placeholder-shown) + .ff-label {
+            top: 14px;
+        }
+
+        .ff-legend {
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Opciones en botones (servicio, tipo de vehículo) */
+        .chip {
+            position: relative;
             display: block;
-            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        .chip input {
+            position: absolute;
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+        }
+
+        .chip span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 48px;
+            padding: 0 12px;
             font-size: 14px;
             font-weight: 500;
             color: #374151;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            transition: all 0.15s ease;
         }
 
-        .field {
-            width: 100%;
-            padding: 11px 14px;
-            font-size: 15px;
-            color: #111827;
-            background: #fff;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        .chip span i {
+            width: 16px;
+            text-align: center;
+            color: #9ca3af;
         }
 
-        .field:hover {
-            border-color: #9ca3af;
+        .chip:hover span {
+            border-color: #d1d5db;
         }
 
-        .field:focus {
-            outline: none;
+        .chip input:checked + span {
+            color: #b91c1c;
+            background: #fef2f2;
             border-color: #dc2626;
-            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+            box-shadow: 0 0 0 1px #dc2626 inset;
+        }
+
+        .chip input:checked + span i {
+            color: #dc2626;
+        }
+
+        .chip input:focus-visible + span {
+            outline: 2px solid #dc2626;
+            outline-offset: 2px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            height: 56px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            background: #dc2626;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px -8px rgba(220, 38, 38, 0.55);
+            transition: background-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .btn-submit:hover {
+            background: #b91c1c;
+        }
+
+        .btn-submit:active {
+            transform: translateY(1px);
         }
 
         /* Formulario de la portada: compacto para que entre en la primera pantalla */
-        .hero-form .field {
-            padding: 8px 12px;
+        .hero-form .ff-input {
+            height: 50px;
+            padding-top: 19px;
             font-size: 14px;
         }
 
-        .hero-form .field-label {
-            margin-bottom: 4px;
-            font-size: 13px;
+        .hero-form .ff-input:focus + .ff-label,
+        .hero-form .ff-input:not(:placeholder-shown) + .ff-label,
+        .hero-form select.ff-input + .ff-label,
+        .hero-form input[type="date"].ff-input + .ff-label {
+            top: 14px;
+            font-size: 11px;
+        }
+
+        .hero-form .btn-submit {
+            height: 50px;
         }
 
         /* Preguntas frecuentes */
@@ -353,23 +511,25 @@
                         <h2 class="text-xl font-bold text-gray-900">Solicita tu cita</h2>
                         <p class="text-[15px] text-gray-500 mt-1 mb-4">Te confirmamos por WhatsApp.</p>
                         <form id="heroForm" class="space-y-3" data-title="AGENDA TU CITA">
-                            <div>
-                                <label for="h-name" class="field-label">Nombre completo</label>
-                                <input id="h-name" name="name" type="text" required autocomplete="name" class="field">
+                            <div class="ff">
+                                <input id="h-name" name="name" type="text" placeholder=" " required autocomplete="name" class="ff-input">
+                                <label for="h-name" class="ff-label">Nombre completo</label>
+                                <i class="fas fa-user ff-icon" aria-hidden="true"></i>
                             </div>
                             <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label for="h-phone" class="field-label">Teléfono</label>
-                                    <input id="h-phone" name="phone" type="tel" required inputmode="numeric" maxlength="15" autocomplete="tel" class="field">
+                                <div class="ff">
+                                    <input id="h-phone" name="phone" type="tel" placeholder=" " required inputmode="numeric" maxlength="15" autocomplete="tel" class="ff-input">
+                                    <label for="h-phone" class="ff-label">Teléfono</label>
+                                    <i class="fas fa-phone ff-icon" aria-hidden="true"></i>
                                 </div>
-                                <div>
-                                    <label for="h-plate" class="field-label">Placa</label>
-                                    <input id="h-plate" name="plate" type="text" required maxlength="8" class="field uppercase">
+                                <div class="ff">
+                                    <input id="h-plate" name="plate" type="text" placeholder=" " required maxlength="8" style="text-transform:uppercase" class="ff-input">
+                                    <label for="h-plate" class="ff-label">Placa</label>
+                                    <i class="fas fa-id-card ff-icon" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div>
-                                <label for="h-service" class="field-label">Servicio</label>
-                                <select id="h-service" name="service" required class="field">
+                            <div class="ff">
+                                <select id="h-service" name="service" required class="ff-input">
                                     <option value="">Selecciona un servicio</option>
                                     <option>Revisión Técnico-Mecánica</option>
                                     <option>SOAT</option>
@@ -377,21 +537,25 @@
                                     <option>Servicio de Grúas</option>
                                     <option>Trámites Vehiculares</option>
                                 </select>
+                                <label for="h-service" class="ff-label">Servicio</label>
+                                <i class="fas fa-screwdriver-wrench ff-icon" aria-hidden="true"></i>
                             </div>
                             <div class="grid grid-cols-2 gap-3">
-                                <div>
-                                    <label for="h-date" class="field-label">Fecha</label>
-                                    <input id="h-date" name="date" type="date" required class="field" data-time-target="h-time">
+                                <div class="ff">
+                                    <input id="h-date" name="date" type="date" placeholder=" " required data-time-target="h-time" class="ff-input">
+                                    <label for="h-date" class="ff-label">Fecha</label>
+                                    <i class="fas fa-calendar ff-icon" aria-hidden="true"></i>
                                 </div>
-                                <div>
-                                    <label for="h-time" class="field-label">Hora</label>
-                                    <select id="h-time" name="time" required class="field">
-                                        <option value="">Selecciona hora</option>
+                                <div class="ff">
+                                    <select id="h-time" name="time" required class="ff-input">
+                                        <option value="">Elige hora</option>
                                     </select>
+                                    <label for="h-time" class="ff-label">Hora</label>
+                                    <i class="fas fa-clock ff-icon" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <button type="submit" class="w-full inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition-colors">
-                                <i class="fab fa-whatsapp text-lg"></i>Agendar por WhatsApp
+                            <button type="submit" class="btn-submit">
+                                <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>Agendar por WhatsApp
                             </button>
                         </form>
                     </div>
@@ -756,47 +920,52 @@
                         <h3 class="text-xl font-bold text-gray-900">Agenda tu cita</h3>
                         <p class="text-[15px] text-gray-500 mt-1 mb-6">Completa el formulario y te confirmamos por WhatsApp.</p>
                         <form id="contactForm" class="space-y-4" data-title="SOLICITUD DE CITA">
-                            <div class="grid sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="c-name" class="field-label">Nombre completo</label>
-                                    <input id="c-name" name="name" type="text" required autocomplete="name" class="field">
+                            <fieldset>
+                                <legend class="ff-legend">¿Qué servicio necesitas?</legend>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                    <label class="chip"><input type="radio" name="service" value="Revisión Técnico-Mecánica" required><span><i class="fas fa-wrench" aria-hidden="true"></i>Revisión RTM</span></label>
+                                    <label class="chip"><input type="radio" name="service" value="SOAT" required><span><i class="fas fa-shield-halved" aria-hidden="true"></i>SOAT</span></label>
+                                    <label class="chip"><input type="radio" name="service" value="Seguros Todo Riesgo" required><span><i class="fas fa-car" aria-hidden="true"></i>Todo Riesgo</span></label>
+                                    <label class="chip"><input type="radio" name="service" value="Servicio de Grúas" required><span><i class="fas fa-truck-pickup" aria-hidden="true"></i>Grúas 24/7</span></label>
+                                    <label class="chip"><input type="radio" name="service" value="Trámites Vehiculares" required><span><i class="fas fa-file-lines" aria-hidden="true"></i>Trámites</span></label>
                                 </div>
-                                <div>
-                                    <label for="c-phone" class="field-label">Teléfono</label>
-                                    <input id="c-phone" name="phone" type="tel" required inputmode="numeric" maxlength="15" autocomplete="tel" class="field">
+                            </fieldset>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                <div class="ff">
+                                    <input id="c-name" name="name" type="text" placeholder=" " required autocomplete="name" class="ff-input">
+                                    <label for="c-name" class="ff-label">Nombre completo</label>
+                                    <i class="fas fa-user ff-icon" aria-hidden="true"></i>
                                 </div>
-                                <div>
-                                    <label for="c-plate" class="field-label">Placa del vehículo</label>
-                                    <input id="c-plate" name="plate" type="text" required maxlength="8" class="field uppercase">
+                                <div class="ff">
+                                    <input id="c-phone" name="phone" type="tel" placeholder=" " required inputmode="numeric" maxlength="15" autocomplete="tel" class="ff-input">
+                                    <label for="c-phone" class="ff-label">Teléfono</label>
+                                    <i class="fas fa-phone ff-icon" aria-hidden="true"></i>
                                 </div>
-                                <div>
-                                    <label for="c-service" class="field-label">Servicio</label>
-                                    <select id="c-service" name="service" required class="field">
-                                        <option value="">Selecciona un servicio</option>
-                                        <option>Revisión Técnico-Mecánica</option>
-                                        <option>SOAT</option>
-                                        <option>Seguros Todo Riesgo</option>
-                                        <option>Servicio de Grúas</option>
-                                        <option>Trámites Vehiculares</option>
-                                    </select>
+                                <div class="ff">
+                                    <input id="c-plate" name="plate" type="text" placeholder=" " required maxlength="8" style="text-transform:uppercase" class="ff-input">
+                                    <label for="c-plate" class="ff-label">Placa del vehículo</label>
+                                    <i class="fas fa-id-card ff-icon" aria-hidden="true"></i>
                                 </div>
-                                <div>
-                                    <label for="c-date" class="field-label">Fecha preferida</label>
-                                    <input id="c-date" name="date" type="date" required class="field" data-time-target="c-time">
-                                </div>
-                                <div>
-                                    <label for="c-time" class="field-label">Hora preferida</label>
-                                    <select id="c-time" name="time" required class="field">
-                                        <option value="">Selecciona hora</option>
-                                    </select>
+                                <div class="ff">
+                                    <input id="c-date" name="date" type="date" placeholder=" " required data-time-target="c-time" class="ff-input">
+                                    <label for="c-date" class="ff-label">Fecha preferida</label>
+                                    <i class="fas fa-calendar ff-icon" aria-hidden="true"></i>
                                 </div>
                             </div>
-                            <div>
-                                <label for="c-message" class="field-label">Mensaje (opcional)</label>
-                                <textarea id="c-message" name="message" rows="3" class="field resize-none"></textarea>
+                            <div class="ff">
+                                <select id="c-time" name="time" required class="ff-input">
+                                    <option value="">Elige hora</option>
+                                </select>
+                                <label for="c-time" class="ff-label">Hora preferida</label>
+                                <i class="fas fa-clock ff-icon" aria-hidden="true"></i>
                             </div>
-                            <button type="submit" class="w-full inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3.5 rounded-lg transition-colors">
-                                <i class="fab fa-whatsapp text-lg"></i>Enviar por WhatsApp
+                            <div class="ff ff-area">
+                                <textarea id="c-message" name="message" rows="3" placeholder=" " class="ff-input"></textarea>
+                                <label for="c-message" class="ff-label">Mensaje (opcional)</label>
+                                <i class="fas fa-comment ff-icon" aria-hidden="true"></i>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>Enviar por WhatsApp
                             </button>
                             <p class="text-[13px] text-gray-500 text-center"><i class="fas fa-lock mr-1"></i>Tus datos solo se usan para agendar tu cita.</p>
                         </form>
@@ -855,52 +1024,58 @@
                 <button type="button" data-close class="w-9 h-9 rounded-lg text-gray-500 hover:bg-gray-100" aria-label="Cerrar"><i class="fas fa-xmark text-lg"></i></button>
             </div>
             <form id="quotationForm" class="p-6 space-y-4">
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div>
-                        <label for="q-name" class="field-label">Nombre completo</label>
-                        <input id="q-name" name="name" type="text" required class="field">
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="ff">
+                        <input id="q-name" name="name" type="text" placeholder=" " required class="ff-input">
+                        <label for="q-name" class="ff-label">Nombre completo</label>
+                        <i class="fas fa-user ff-icon" aria-hidden="true"></i>
                     </div>
-                    <div>
-                        <label for="q-phone" class="field-label">Teléfono</label>
-                        <input id="q-phone" name="phone" type="tel" required inputmode="numeric" maxlength="15" class="field">
+                    <div class="ff">
+                        <input id="q-phone" name="phone" type="tel" placeholder=" " required inputmode="numeric" maxlength="15" class="ff-input">
+                        <label for="q-phone" class="ff-label">Teléfono</label>
+                        <i class="fas fa-phone ff-icon" aria-hidden="true"></i>
                     </div>
-                    <div>
-                        <label for="q-vehicle" class="field-label">Tipo de vehículo</label>
-                        <select id="q-vehicle" name="vehicle" required class="field">
-                            <option value="">Selecciona tipo</option>
-                            <option>Automóvil</option>
-                            <option>Camioneta</option>
-                            <option>Motocicleta</option>
-                            <option>Camión</option>
-                            <option>Bus</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="q-year" class="field-label">Año del vehículo</label>
-                        <input id="q-year" name="year" type="number" min="1950" max="2030" class="field">
-                    </div>
-                </div>
-                <div>
-                    <label for="q-email" class="field-label">Correo (opcional)</label>
-                    <input id="q-email" name="email" type="email" class="field">
                 </div>
                 <fieldset>
-                    <legend class="field-label">Servicios</legend>
-                    <div class="grid sm:grid-cols-2 gap-2 text-[15px]">
-                        <label class="flex items-center gap-2"><input type="checkbox" name="services" value="Revisión Técnico-Mecánica" class="accent-red-600 w-4 h-4">Revisión Técnico-Mecánica</label>
-                        <label class="flex items-center gap-2"><input type="checkbox" name="services" value="SOAT" class="accent-red-600 w-4 h-4">SOAT</label>
-                        <label class="flex items-center gap-2"><input type="checkbox" name="services" value="Seguros Todo Riesgo" class="accent-red-600 w-4 h-4">Seguros Todo Riesgo</label>
-                        <label class="flex items-center gap-2"><input type="checkbox" name="services" value="Servicio de Grúas" class="accent-red-600 w-4 h-4">Servicio de Grúas</label>
-                        <label class="flex items-center gap-2"><input type="checkbox" name="services" value="Trámites Vehiculares" class="accent-red-600 w-4 h-4">Trámites Vehiculares</label>
+                    <legend class="ff-legend">Tipo de vehículo</legend>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <label class="chip"><input type="radio" name="vehicle" value="Automóvil" required><span><i class="fas fa-car-side" aria-hidden="true"></i>Automóvil</span></label>
+                        <label class="chip"><input type="radio" name="vehicle" value="Camioneta" required><span><i class="fas fa-truck-pickup" aria-hidden="true"></i>Camioneta</span></label>
+                        <label class="chip"><input type="radio" name="vehicle" value="Motocicleta" required><span><i class="fas fa-motorcycle" aria-hidden="true"></i>Moto</span></label>
+                        <label class="chip"><input type="radio" name="vehicle" value="Camión" required><span><i class="fas fa-truck" aria-hidden="true"></i>Camión</span></label>
+                        <label class="chip"><input type="radio" name="vehicle" value="Bus" required><span><i class="fas fa-bus" aria-hidden="true"></i>Bus</span></label>
                     </div>
                 </fieldset>
-                <div>
-                    <label for="q-comments" class="field-label">Comentarios (opcional)</label>
-                    <textarea id="q-comments" name="comments" rows="3" class="field resize-none"></textarea>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="ff">
+                        <input id="q-year" name="year" type="number" placeholder=" " min="1950" max="2030" class="ff-input">
+                        <label for="q-year" class="ff-label">Año del vehículo</label>
+                        <i class="fas fa-calendar ff-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="ff">
+                        <input id="q-email" name="email" type="email" placeholder=" " class="ff-input">
+                        <label for="q-email" class="ff-label">Correo (opcional)</label>
+                        <i class="fas fa-envelope ff-icon" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <div class="flex flex-col-reverse sm:flex-row gap-3 pt-2">
-                    <button type="button" data-close class="flex-1 border border-gray-300 hover:bg-gray-50 font-semibold py-3 rounded-lg">Cancelar</button>
-                    <button type="submit" class="flex-1 inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg"><i class="fab fa-whatsapp"></i>Enviar por WhatsApp</button>
+                <fieldset>
+                    <legend class="ff-legend">Servicios que necesitas</legend>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <label class="chip"><input type="checkbox" name="services" value="Revisión Técnico-Mecánica"><span><i class="fas fa-wrench" aria-hidden="true"></i>Revisión RTM</span></label>
+                        <label class="chip"><input type="checkbox" name="services" value="SOAT"><span><i class="fas fa-shield-halved" aria-hidden="true"></i>SOAT</span></label>
+                        <label class="chip"><input type="checkbox" name="services" value="Seguros Todo Riesgo"><span><i class="fas fa-car" aria-hidden="true"></i>Todo Riesgo</span></label>
+                        <label class="chip"><input type="checkbox" name="services" value="Servicio de Grúas"><span><i class="fas fa-truck-pickup" aria-hidden="true"></i>Grúas 24/7</span></label>
+                        <label class="chip"><input type="checkbox" name="services" value="Trámites Vehiculares"><span><i class="fas fa-file-lines" aria-hidden="true"></i>Trámites</span></label>
+                    </div>
+                </fieldset>
+                <div class="ff ff-area">
+                    <textarea id="q-comments" name="comments" rows="3" placeholder=" " class="ff-input"></textarea>
+                    <label for="q-comments" class="ff-label">Comentarios (opcional)</label>
+                    <i class="fas fa-comment ff-icon" aria-hidden="true"></i>
+                </div>
+                <div class="flex flex-col-reverse sm:flex-row gap-3 pt-1">
+                    <button type="button" data-close class="flex-1 border border-gray-300 hover:bg-gray-50 font-semibold py-3.5 rounded-xl">Cancelar</button>
+                    <button type="submit" class="btn-submit flex-1"><i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>Enviar por WhatsApp</button>
                 </div>
             </form>
         </div>
@@ -952,7 +1127,7 @@
 
         function fillTimeSelect(select, dateValue) {
             const isSunday = parseLocalDate(dateValue).getDay() === 0;
-            select.innerHTML = `<option value="">${isSunday ? 'Selecciona hora (domingo con cita previa)' : 'Selecciona hora'}</option>`;
+            select.innerHTML = `<option value="">${isSunday ? 'Elige hora (domingo con cita)' : 'Elige hora'}</option>`;
             timeSlots(dateValue).forEach(time => select.add(new Option(time, time)));
         }
 
