@@ -308,6 +308,39 @@
             transform: translateY(1px);
         }
 
+        /* Fecha alineada a la izquierda (Safari en iPhone la centra) */
+        input[type="date"].ff-input::-webkit-date-and-time-value {
+            text-align: left;
+        }
+
+        input[type="date"].ff-input {
+            display: block;
+            min-width: 0;
+        }
+
+        /* Celular: letra de 16px en campos (evita el zoom automático de iPhone) y pastillas */
+        @media (max-width: 639px) {
+            .ff-input {
+                height: 54px;
+                font-size: 16px;
+            }
+
+            .ff-area .ff-input {
+                height: auto;
+            }
+
+            .chips .chip span {
+                height: 44px;
+                padding: 0 14px;
+                border-radius: 999px;
+                white-space: nowrap;
+            }
+
+            .ff-legend {
+                font-size: 15px;
+            }
+        }
+
         /* Formulario de la portada: compacto para que entre en la primera pantalla */
         .hero-form .ff-input {
             height: 50px;
@@ -569,11 +602,11 @@
         </section>
 
         <!-- Servicios -->
-        <section id="servicios" class="py-16 lg:py-20">
+        <section id="servicios" class="py-12 sm:py-16 lg:py-20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="max-w-2xl mb-10">
+                <div class="max-w-2xl mb-7 sm:mb-10">
                     <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Servicios</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Todo lo que tu vehículo necesita, en un solo lugar</h2>
+                    <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Todo lo que tu vehículo necesita, en un solo lugar</h2>
                     <p class="justify text-lg text-gray-600">Servicios completos de diagnóstico automotriz con la más alta tecnología y personal especializado.</p>
                 </div>
 
@@ -647,11 +680,11 @@
         </section>
 
         <!-- Tarifas y formas de pago -->
-        <section id="tarifas" class="py-16 lg:py-20 bg-gray-50 border-y border-gray-200">
+        <section id="tarifas" class="py-12 sm:py-16 lg:py-20 bg-gray-50 border-y border-gray-200">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="max-w-2xl mb-10">
+                <div class="max-w-2xl mb-7 sm:mb-10">
                     <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Tarifas</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Revisión Técnico-Mecánica</h2>
+                    <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Revisión Técnico-Mecánica</h2>
                     <p class="justify text-lg text-gray-600">Precios claros según el tipo de vehículo. Sin sorpresas.</p>
                 </div>
 
@@ -733,12 +766,12 @@
         </section>
 
         <!-- Franja de fotos -->
-        <section class="py-16 lg:py-20 bg-gray-950 text-white" aria-label="Seguridad en cada detalle">
+        <section class="py-12 sm:py-16 lg:py-20 bg-gray-950 text-white" aria-label="Seguridad en cada detalle">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
                     <div>
                         <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-500 mb-2">Revisión completa</p>
-                        <h2 class="text-3xl lg:text-4xl font-bold">Seguridad en cada detalle</h2>
+                        <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold">Seguridad en cada detalle</h2>
                     </div>
                     <a href="#agendar" class="self-start md:self-auto inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 font-semibold px-5 py-3 rounded-lg transition-colors"><i class="fas fa-calendar-check"></i>Agendar cita</a>
                 </div>
@@ -764,11 +797,11 @@
         </section>
 
         <!-- Cómo funciona -->
-        <section id="proceso" class="py-16 lg:py-20">
+        <section id="proceso" class="py-12 sm:py-16 lg:py-20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="max-w-2xl mb-10">
+                <div class="max-w-2xl mb-7 sm:mb-10">
                     <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Cómo funciona</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">Tu revisión en 3 pasos</h2>
+                    <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900">Tu revisión en 3 pasos</h2>
                 </div>
                 <ol class="grid md:grid-cols-3 gap-5">
                     <li class="border border-gray-200 rounded-2xl p-6">
@@ -800,7 +833,7 @@
         </section>
 
         <!-- Nosotros -->
-        <section id="nosotros" class="py-16 lg:py-20 bg-gray-50 border-y border-gray-200">
+        <section id="nosotros" class="py-12 sm:py-16 lg:py-20 bg-gray-50 border-y border-gray-200">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                     <div class="relative">
@@ -816,7 +849,7 @@
 
                     <div>
                         <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Nosotros</p>
-                        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Un centro de diagnóstico en el que puedes confiar</h2>
+                        <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Un centro de diagnóstico en el que puedes confiar</h2>
                         <p class="justify text-lg text-gray-600 mb-8">Centro de diagnóstico automotriz con tecnología de última generación, contribuyendo a la seguridad vial y al cuidado del medio ambiente desde 2021.</p>
 
                         <div class="space-y-6 prose-justify">
@@ -878,11 +911,11 @@
         </section>
 
         <!-- Preguntas frecuentes -->
-        <section id="preguntas" class="py-16 lg:py-20">
+        <section id="preguntas" class="py-12 sm:py-16 lg:py-20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-4">
                     <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Preguntas frecuentes</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Resolvemos tus dudas</h2>
+                    <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Resolvemos tus dudas</h2>
                     <p class="text-gray-600 mb-6">¿No encuentras tu respuesta? Escríbenos y te ayudamos.</p>
                     <a href="https://wa.me/573008994671" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-3 rounded-lg transition-colors">
                         <i class="fab fa-whatsapp text-lg"></i>Escribir por WhatsApp
@@ -937,11 +970,11 @@
         </section>
 
         <!-- Contacto y cita -->
-        <section id="contacto" class="py-16 lg:py-20 bg-gray-50 border-t border-gray-200">
+        <section id="contacto" class="py-12 sm:py-16 lg:py-20 bg-gray-50 border-t border-gray-200">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="max-w-2xl mb-10">
+                <div class="max-w-2xl mb-7 sm:mb-10">
                     <p class="text-[13px] font-semibold tracking-[0.14em] uppercase text-red-600 mb-2">Contacto</p>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Visítanos o agenda tu cita</h2>
+                    <h2 class="text-[27px] leading-tight sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Visítanos o agenda tu cita</h2>
                     <p class="text-lg text-gray-600">Escríbenos, llámanos o visítanos. Te atendemos con gusto.</p>
                 </div>
 
@@ -970,13 +1003,13 @@
                     </div>
 
                     <!-- Formulario de cita -->
-                    <div id="agendar" class="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8">
+                    <div id="agendar" class="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 lg:p-8">
                         <h3 class="text-xl font-bold text-gray-900">Agenda tu cita</h3>
                         <p class="text-[15px] text-gray-500 mt-1 mb-6">Completa el formulario y te confirmamos por WhatsApp.</p>
                         <form id="contactForm" class="space-y-4" data-title="SOLICITUD DE CITA">
                             <fieldset>
                                 <legend class="ff-legend">¿Qué servicio necesitas?</legend>
-                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                <div class="chips flex flex-wrap gap-2 sm:grid sm:grid-cols-3">
                                     <label class="chip"><input type="radio" name="service" value="Revisión Técnico-Mecánica" required><span><i class="fas fa-wrench" aria-hidden="true"></i>Revisión RTM</span></label>
                                     <label class="chip"><input type="radio" name="service" value="SOAT" required><span><i class="fas fa-shield-halved" aria-hidden="true"></i>SOAT</span></label>
                                     <label class="chip"><input type="radio" name="service" value="Seguros Todo Riesgo" required><span><i class="fas fa-car" aria-hidden="true"></i>Todo Riesgo</span></label>
@@ -1031,18 +1064,18 @@
 
     <!-- Pie de página -->
     <footer class="bg-gray-900 text-gray-400 text-[15px]">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-7 sm:gap-10">
             <div class="lg:col-span-2">
-                <div class="flex items-center gap-3 mb-4">
+                <div class="flex items-center gap-3 sm:mb-4">
                     <img src="logocda.png" alt="" width="44" height="51" loading="lazy" class="w-11 h-auto">
                     <div>
                         <p class="font-display font-bold text-white text-lg leading-tight">CDA Santa Cruz S.A.S</p>
                         <p class="text-[13px]">Centro de Diagnóstico Automotor</p>
                     </div>
                 </div>
-                <p class="justify max-w-sm">Tu centro de confianza para el diagnóstico automotriz. Contribuyendo a la seguridad vial y el cuidado del medio ambiente desde 2021.</p>
+                <p class="hidden sm:block justify max-w-sm">Tu centro de confianza para el diagnóstico automotriz. Contribuyendo a la seguridad vial y el cuidado del medio ambiente desde 2021.</p>
             </div>
-            <div>
+            <div class="hidden sm:block">
                 <p class="font-semibold text-white mb-4">Servicios</p>
                 <ul class="space-y-2.5">
                     <li><a href="#tarifas" class="hover:text-white">Revisión Técnico-Mecánica</a></li>
@@ -1053,8 +1086,8 @@
                 </ul>
             </div>
             <div>
-                <p class="font-semibold text-white mb-4">Contacto</p>
-                <ul class="space-y-2.5">
+                <p class="font-semibold text-white mb-3 sm:mb-4">Contacto</p>
+                <ul class="space-y-2 sm:space-y-2.5">
                     <li>Calle 78 Num 6 - 47, Barrio Sevilla</li>
                     <li><a href="https://wa.me/573008994671" target="_blank" rel="noopener" class="hover:text-white"><i class="fab fa-whatsapp mr-2"></i>300 899 4671</a></li>
                     <li class="break-all"><a href="mailto:calidadcdasantacruz@gmail.com" class="hover:text-white">calidadcdasantacruz@gmail.com</a></li>
@@ -1092,7 +1125,7 @@
                 </div>
                 <fieldset>
                     <legend class="ff-legend">Tipo de vehículo</legend>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div class="chips flex flex-wrap gap-2 sm:grid sm:grid-cols-3">
                         <label class="chip"><input type="radio" name="vehicle" value="Automóvil" required><span><i class="fas fa-car-side" aria-hidden="true"></i>Automóvil</span></label>
                         <label class="chip"><input type="radio" name="vehicle" value="Camioneta" required><span><i class="fas fa-truck-pickup" aria-hidden="true"></i>Camioneta</span></label>
                         <label class="chip"><input type="radio" name="vehicle" value="Motocicleta" required><span><i class="fas fa-motorcycle" aria-hidden="true"></i>Moto</span></label>
@@ -1114,7 +1147,7 @@
                 </div>
                 <fieldset>
                     <legend class="ff-legend">Servicios que necesitas</legend>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    <div class="chips flex flex-wrap gap-2 sm:grid sm:grid-cols-3">
                         <label class="chip"><input type="checkbox" name="services" value="Revisión Técnico-Mecánica"><span><i class="fas fa-wrench" aria-hidden="true"></i>Revisión RTM</span></label>
                         <label class="chip"><input type="checkbox" name="services" value="SOAT"><span><i class="fas fa-shield-halved" aria-hidden="true"></i>SOAT</span></label>
                         <label class="chip"><input type="checkbox" name="services" value="Seguros Todo Riesgo"><span><i class="fas fa-car" aria-hidden="true"></i>Todo Riesgo</span></label>
