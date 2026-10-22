@@ -35,7 +35,7 @@
     <link rel="icon" type="image/png" href="logocda.png">
     <link rel="shortcut icon" type="image/png" href="logocda.png">
     <link rel="apple-touch-icon" href="logocda.png">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -201,7 +201,7 @@
 
         /* Hero Section */
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdasantacruz.com/banner.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -213,7 +213,7 @@
 
         @media (max-width: 768px) {
             .hero-bg {
-                background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdasantacruz.com/bannercel.jpg');
+                background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bannercel.jpg');
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
@@ -977,7 +977,7 @@
         }
 
         .dark-mode .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://cdasantacruz.com/banner.jpg');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('banner.jpg');
         }
 
         .dark-mode .nosotros-section {
@@ -1268,7 +1268,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <div class="logo-container">
-                    <img src="https://cdasantacruz.com/logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 mr-4 object-contain logo-fade-in">
+                    <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 mr-4 object-contain logo-fade-in">
                     <div>
                         <div class="logo-text">CDA SANTA CRUZ S.A.S</div>
                         <div class="logo-subtitle">Centro de Diagnóstico Automotor</div>
@@ -1338,7 +1338,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="flex justify-between items-center mb-8">
             <div class="logo-container">
-                <img src="https://cdasantacruz.com/logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 mr-4 object-contain logo-fade-in">
+                <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 mr-4 object-contain logo-fade-in">
                 <div>
                     <div class="logo-text">CDA SANTA CRUZ S.A.S</div>
                     <div class="logo-subtitle">Centro de Diagnóstico Automotor</div>
@@ -1529,7 +1529,7 @@
                 <!-- Left Column: Image -->
                 <div>
                     <div class="relative">
-                        <img src="https://cdasantacruz.com/about.jpg" 
+                        <img src="about.jpg" 
                              alt="Centro de Diagnóstico CDA Santa Cruz" 
                              class="rounded-3xl shadow-2xl w-full h-[600px] object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
@@ -2250,7 +2250,7 @@
                 <!-- Company Info -->
                 <div class="lg:col-span-2">
                     <div class="flex items-center mb-8">
-                        <img src="https://cdasantacruz.com/logocda.png" alt="CDA Santa Cruz Logo" class="w-20 h-24 mr-6 object-contain">
+                        <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-20 h-24 mr-6 object-contain">
                         <div>
                             <div class="text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
                                 CDA SANTA CRUZ S.A.S
@@ -2406,7 +2406,7 @@
             <div class="p-8">
                 <div class="flex justify-between items-center mb-6">
                     <div class="flex items-center gap-4">
-                        <img src="https://cdasantacruz.com/logocda.png" alt="CDA Santa Cruz Logo" class="w-12 h-15 object-contain">
+                        <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-12 h-15 object-contain">
                         <h2 class="text-3xl font-bold text-gray-900">Cotización de Servicios</h2>
                     </div>
                     <button onclick="closeModal('quotationModal')" class="text-gray-500 hover:text-gray-700 text-2xl">
@@ -2935,7 +2935,7 @@
                             <!-- Header -->
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <img src="https://cdasantacruz.com/logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 object-contain">
+                                    <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 object-contain">
                                     <div>
                                         <h3 class="text-2xl font-bold text-gray-900">${service.title}</h3>
                                         <div class="w-16 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mt-2"></div>
@@ -3298,5 +3298,5 @@ Por favor, envíenme detalles sobre:
             updateContactTimeOptions(today);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9974501356913eeb',t:'MTc2MTkyNTg3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
