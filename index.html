@@ -280,7 +280,7 @@
             line-height: 1.6;
             margin-bottom: 32px;
             max-width: 600px;
-            text-align: left;
+            text-align: justify;
         }
 
         .hero-button {
@@ -813,7 +813,7 @@
         .info-card-text {
             color: #6b7280;
             line-height: 1.6;
-            text-align: left;
+            text-align: justify;
         }
 
         /* Services Section - Consistent with About Section */
@@ -872,17 +872,17 @@
         }
 
         .service-description {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #6b7280;
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 24px;
-            text-align: left;
+            text-align: justify;
             flex-grow: 1;
         }
 
         .service-link {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #dc2626;
             font-size: 15px;
             font-weight: 500;
@@ -1161,6 +1161,35 @@
 
         p {
             line-height: 1.65;
+        }
+
+        /* Texto justificado; la división en sílabas (lang="es") evita huecos grandes */
+        p,
+        li {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+
+        /* En bloques centrados la última línea sigue centrada */
+        .text-center p,
+        p.text-center,
+        .text-center li,
+        .section-lead {
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .text-right p,
+        p.text-right {
+            text-align: justify;
+            text-align-last: right;
+        }
+
+        /* Leyendas de una sola línea junto a un ícono: sin justificar */
+        p.caption {
+            text-align: left;
+            text-align-last: auto;
         }
 
         :focus-visible {
@@ -1881,7 +1910,7 @@
                                 <div class="flex items-center justify-between">
                                     <div>
                                         <h4 class="font-bold text-gray-900 text-lg">Tecnología Avanzada</h4>
-                                        <p class="text-gray-600">Equipos de última generación</p>
+                                        <p class="text-gray-600 caption">Equipos de última generación</p>
                                     </div>
                                     <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                                         <i class="fas fa-cogs text-white"></i>
