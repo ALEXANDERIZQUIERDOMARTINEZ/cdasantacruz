@@ -158,6 +158,17 @@
             box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
         }
 
+        /* Formulario de la portada: compacto para que entre en la primera pantalla */
+        .hero-form .field {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+
+        .hero-form .field-label {
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+
         /* Preguntas frecuentes */
         .faq summary {
             list-style: none;
@@ -269,7 +280,7 @@
 
     <!-- Encabezado -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-[71px] flex items-center justify-between gap-6">
             <a href="#inicio" class="flex items-center gap-3 shrink-0">
                 <img src="logocda.png" alt="CDA Santa Cruz" width="44" height="51" class="w-11 h-auto">
                 <span class="leading-tight">
@@ -317,12 +328,12 @@
         <!-- Portada -->
         <section id="inicio" class="hero relative isolate overflow-hidden text-white">
             <div class="hero-bg absolute inset-0 -z-10" aria-hidden="true"></div>
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 min-h-[calc(100svh-72px)] lg:min-h-[640px] pt-16 pb-8 lg:py-24 grid lg:grid-cols-12 gap-10 items-end lg:items-center">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 min-h-[calc(100svh-72px)] md:min-h-[calc(100svh-108px)] pt-16 pb-8 lg:py-8 grid lg:grid-cols-12 gap-10 items-end lg:items-center">
                 <div class="lg:col-span-7 min-w-0">
                     <p class="reveal inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-white/85 mb-5" style="--i:0">
                         <span class="w-6 h-px bg-red-500"></span>Certificado ISO/IEC 17020
                     </p>
-                    <h1 class="reveal text-[40px] sm:text-6xl lg:text-[64px] font-bold leading-[1.04] mb-8" style="--i:1">
+                    <h1 class="reveal text-[40px] sm:text-6xl lg:text-[length:clamp(44px,7.5vh,64px)] font-bold leading-[1.04] mb-8" style="--i:1">
                         Revisión técnico-mecánica<br><span class="text-red-500">certificada.</span>
                     </h1>
                     <div class="reveal flex gap-3" style="--i:2">
@@ -338,10 +349,10 @@
 
                 <!-- Formulario rápido (escritorio) -->
                 <div class="reveal hidden lg:block lg:col-span-5" style="--i:3">
-                    <div class="bg-white text-gray-700 rounded-2xl shadow-2xl p-7">
+                    <div class="hero-form bg-white text-gray-700 rounded-2xl shadow-2xl p-6">
                         <h2 class="text-xl font-bold text-gray-900">Solicita tu cita</h2>
-                        <p class="text-[15px] text-gray-500 mt-1 mb-5">Te confirmamos por WhatsApp.</p>
-                        <form id="heroForm" class="space-y-4" data-title="AGENDA TU CITA">
+                        <p class="text-[15px] text-gray-500 mt-1 mb-4">Te confirmamos por WhatsApp.</p>
+                        <form id="heroForm" class="space-y-3" data-title="AGENDA TU CITA">
                             <div>
                                 <label for="h-name" class="field-label">Nombre completo</label>
                                 <input id="h-name" name="name" type="text" required autocomplete="name" class="field">
@@ -379,7 +390,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <button type="submit" class="w-full inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3.5 rounded-lg transition-colors">
+                            <button type="submit" class="w-full inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-lg transition-colors">
                                 <i class="fab fa-whatsapp text-lg"></i>Agendar por WhatsApp
                             </button>
                         </form>
