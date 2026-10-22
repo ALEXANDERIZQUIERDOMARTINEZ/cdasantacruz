@@ -40,21 +40,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --red-primary: #a8833f;
-            --red-secondary: #c9a85a;
-            --red-dark: #84652f;
+            --red-primary: #dc2626;
+            --red-secondary: #ef4444;
+            --red-dark: #b91c1c;
             --black-primary: #1a1a1a;
             --white: #ffffff;
-            --gray-50: #fafaf9;
-            --gray-100: #f5f5f4;
-            --gray-200: #e7e5e4;
-            --gray-300: #d4d4d4;
-            --gray-400: #a3a3a3;
-            --gray-500: #737373;
-            --gray-600: #525252;
-            --gray-700: #3d3d3d;
-            --gray-800: #232323;
-            --gray-900: #141414;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
         }
 
         .text-dark {
@@ -201,7 +201,7 @@
 
         /* Hero Section */
         .hero-bg {
-            background: linear-gradient(90deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.7) 50%, rgba(10,10,10,0.45) 100%), url('banner.jpg');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner.jpg');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -213,7 +213,7 @@
 
         @media (max-width: 768px) {
             .hero-bg {
-                background-image: linear-gradient(180deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.85) 100%), url('bannercel.jpg');
+                background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bannercel.jpg');
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
@@ -235,14 +235,14 @@
         .btn-modern {
             background: linear-gradient(135deg, var(--red-primary), var(--red-secondary));
             border: 2px solid transparent;
-            box-shadow: 0 10px 30px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
             transition: all 0.3s ease;
         }
 
         .btn-modern:hover {
             background: white;
             color: var(--gray-700);
-            box-shadow: 0 15px 40px rgba(168, 131, 63, 0.4);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
             transform: translateY(-2px);
         }
 
@@ -280,121 +280,14 @@
             font-size: 18px;
             font-weight: 700;
             border: 2px solid transparent;
-            box-shadow: 0 10px 30px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .hero-button:hover {
-            box-shadow: 0 15px 40px rgba(168, 131, 63, 0.4);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
             transform: translateY(-2px);
-        }
-
-        /* Hero: negro + dorado */
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 16px;
-            margin-bottom: 22px;
-            border: 1px solid rgba(201, 168, 90, 0.5);
-            border-radius: 999px;
-            background: rgba(20, 20, 20, 0.55);
-            backdrop-filter: blur(8px);
-            color: #e7d8ab;
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 0.04em;
-        }
-
-        .hero-badge i {
-            color: #c9a85a;
-        }
-
-        .hero-title-gold {
-            background: linear-gradient(100deg, #e7d8ab 0%, #c9a85a 45%, #f3ecd6 60%, #a8833f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-lead {
-            font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-            font-weight: 300;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 520px;
-            margin-bottom: 36px;
-        }
-
-        .hero-cta-primary,
-        .hero-cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px 30px;
-            border-radius: 14px;
-            font-size: 17px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-        }
-
-        .hero-cta-primary {
-            background: linear-gradient(135deg, #d9c07c, #a8833f);
-            color: #141414;
-            box-shadow: 0 12px 30px rgba(168, 131, 63, 0.35);
-        }
-
-        .hero-cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 18px 40px rgba(168, 131, 63, 0.5);
-        }
-
-        .hero-cta-secondary {
-            border: 1.5px solid rgba(255, 255, 255, 0.45);
-            color: white;
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(6px);
-        }
-
-        .hero-cta-secondary:hover {
-            border-color: #c9a85a;
-            color: #e7d8ab;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, auto);
-            justify-content: start;
-            gap: 32px;
-            margin-top: 40px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(201, 168, 90, 0.3);
-        }
-
-        .hero-stats div {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-stats strong {
-            font-family: 'Poppins', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: #d9c07c;
-            line-height: 1.1;
-        }
-
-        .hero-stats span {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.65);
-        }
-
-        @media (max-width: 640px) {
-            .hero-badge { font-size: 11px; }
-            .hero-stats { gap: 18px; margin-top: 32px; }
-            .hero-stats strong { font-size: 22px; }
         }
 
         /* Hero Form */
@@ -425,7 +318,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 24px;
-            box-shadow: 0 8px 25px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
             animation: pulse 2s infinite;
         }
 
@@ -561,7 +454,7 @@
             border-radius: 20px;
             font-size: 16px;
             font-weight: 500;
-            color: #232323;
+            color: #1f2937;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
@@ -605,15 +498,15 @@
 
         .input-modern:focus {
             background: rgba(255, 255, 255, 0.25);
-            border-color: rgba(168, 131, 63, 0.6);
-            box-shadow: 0 0 0 4px rgba(168, 131, 63, 0.1), 0 12px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(220, 38, 38, 0.6);
+            box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1), 0 12px 40px rgba(0, 0, 0, 0.15);
             transform: translateY(-3px);
             outline: none;
         }
 
         .input-modern:hover {
             background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(168, 131, 63, 0.3);
+            border-color: rgba(220, 38, 38, 0.3);
             transform: translateY(-1px);
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
         }
@@ -622,7 +515,7 @@
             position: absolute;
             left: 24px;
             top: 20px;
-            color: #737373;
+            color: #6b7280;
             font-weight: 600;
             font-size: 16px;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -669,9 +562,9 @@
         .floating-label select:focus + label,
         .floating-label select:not([value=""]) + label {
             transform: translateY(-40px) scale(0.85);
-            color: #a8833f;
-            background: linear-gradient(135deg, rgba(168, 131, 63, 0.1), rgba(201, 168, 90, 0.05));
-            border: 1px solid rgba(168, 131, 63, 0.2);
+            color: #dc2626;
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(239, 68, 68, 0.05));
+            border: 1px solid rgba(220, 38, 38, 0.2);
         }
 
         .input-icon {
@@ -679,20 +572,20 @@
             right: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #a3a3a3;
+            color: #9ca3af;
             font-size: 18px;
             transition: all 0.3s ease;
             z-index: 10;
         }
 
         .floating-label:focus-within .input-icon {
-            color: #a8833f;
+            color: #dc2626;
             transform: translateY(-50%) scale(1.1);
         }
 
         .submit-button {
             width: 100%;
-            background: linear-gradient(to right, #a8833f, #c9a85a, #84652f);
+            background: linear-gradient(to right, #dc2626, #ef4444, #b91c1c);
             color: white;
             padding: 20px 32px;
             border-radius: 16px;
@@ -701,7 +594,7 @@
             border: none;
             cursor: pointer;
             transition: all 0.5s ease;
-            box-shadow: 0 8px 25px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -732,7 +625,7 @@
         }
 
         .submit-button:hover {
-            box-shadow: 0 12px 35px rgba(168, 131, 63, 0.4);
+            box-shadow: 0 12px 35px rgba(220, 38, 38, 0.4);
             transform: translateY(-3px) scale(1.02);
         }
 
@@ -777,7 +670,7 @@
 
         /* About Section */
         .nosotros-section {
-            background: linear-gradient(135deg, #fafaf9, white, #faf7ef);
+            background: linear-gradient(135deg, #f9fafb, white, #eff6ff);
             padding: 80px 0;
             position: relative;
             overflow: hidden;
@@ -789,7 +682,7 @@
             left: 0;
             width: 384px;
             height: 384px;
-            background: linear-gradient(135deg, rgba(168, 131, 63,0.1), rgba(201, 168, 90,0.08));
+            background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(251,146,60,0.08));
             border-radius: 50%;
             filter: blur(60px);
             transform: translate(-50%, -50%);
@@ -801,7 +694,7 @@
             right: 0;
             width: 320px;
             height: 320px;
-            background: linear-gradient(135deg, rgba(201, 168, 90,0.1), rgba(201, 168, 90,0.08));
+            background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(147,51,234,0.08));
             border-radius: 50%;
             filter: blur(60px);
             transform: translate(50%, 50%);
@@ -810,13 +703,13 @@
         .section-header-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #a8833f, #c9a85a);
+            background: linear-gradient(135deg, #dc2626, #ef4444);
             border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 24px;
-            box-shadow: 0 8px 25px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
             transform: rotate(-12deg);
             transition: transform 0.3s ease;
         }
@@ -828,7 +721,7 @@
         .section-title {
             font-size: 48px;
             font-weight: 700;
-            background: linear-gradient(to right, #141414, #3d3d3d, #141414);
+            background: linear-gradient(to right, #111827, #374151, #111827);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -839,10 +732,10 @@
         .section-divider {
             width: 128px;
             height: 6px;
-            background: linear-gradient(to right, #a8833f, #c9a85a);
+            background: linear-gradient(to right, #dc2626, #ef4444);
             margin: 0 auto;
             border-radius: 3px;
-            box-shadow: 0 2px 4px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
         }
 
         .stats-card {
@@ -851,7 +744,7 @@
             padding: 24px;
             text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(231, 229, 228, 0.5);
+            border: 1px solid rgba(229, 231, 235, 0.5);
             transition: all 0.3s ease;
         }
 
@@ -863,13 +756,13 @@
         .stats-number {
             font-size: 32px;
             font-weight: 700;
-            color: #a8833f;
+            color: #dc2626;
             margin-bottom: 8px;
         }
 
         .stats-label {
             font-size: 14px;
-            color: #737373;
+            color: #6b7280;
             font-weight: 500;
         }
 
@@ -878,7 +771,7 @@
             border-radius: 24px;
             padding: 32px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(231, 229, 228, 0.5);
+            border: 1px solid rgba(229, 231, 235, 0.5);
             transition: all 0.3s ease;
             margin-bottom: 32px;
         }
@@ -890,24 +783,24 @@
         .info-card-icon {
             width: 64px;
             height: 64px;
-            background: linear-gradient(135deg, #a8833f, #c9a85a);
+            background: linear-gradient(135deg, #dc2626, #ef4444);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
             flex-shrink: 0;
         }
 
         .info-card-title {
             font-size: 24px;
             font-weight: 700;
-            color: #141414;
+            color: #111827;
             margin-bottom: 16px;
         }
 
         .info-card-text {
-            color: #737373;
+            color: #6b7280;
             line-height: 1.6;
             text-align: justify;
         }
@@ -937,14 +830,14 @@
         .service-icon-container {
             width: 64px;
             height: 64px;
-            background: linear-gradient(to bottom right, #a8833f, #84652f);
+            background: linear-gradient(to bottom right, #dc2626, #b91c1c);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 24px;
-            box-shadow: 0 4px 6px -1px rgba(168, 131, 63, 0.3),
-                        0 2px 4px -1px rgba(168, 131, 63, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.3),
+                        0 2px 4px -1px rgba(220, 38, 38, 0.2);
             transition: all 0.3s ease;
         }
 
@@ -955,21 +848,21 @@
 
         .service-card:hover .service-icon-container {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(168, 131, 63, 0.4),
-                        0 4px 6px -2px rgba(168, 131, 63, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.4),
+                        0 4px 6px -2px rgba(220, 38, 38, 0.3);
         }
 
         .service-title {
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
             font-weight: 700;
-            color: #141414;
+            color: #111827;
             margin-bottom: 12px;
         }
 
         .service-description {
             font-family: 'Poppins', sans-serif;
-            color: #737373;
+            color: #6b7280;
             font-size: 15px;
             line-height: 1.6;
             margin-bottom: 24px;
@@ -979,7 +872,7 @@
 
         .service-link {
             font-family: 'Poppins', sans-serif;
-            color: #a8833f;
+            color: #dc2626;
             font-size: 15px;
             font-weight: 500;
             text-decoration: none;
@@ -1052,7 +945,7 @@
         /* Dark Mode Styles */
         .dark-mode {
             background-color: #1a1a1a;
-            color: #e7e5e4;
+            color: #e5e7eb;
         }
 
         .dark-mode .topbar {
@@ -1060,27 +953,27 @@
         }
 
         .dark-mode .nav-container {
-            background: #232323;
+            background: #1f2937;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
         }
 
         .dark-mode .nav-link {
-            color: #e7e5e4;
+            color: #e5e7eb;
         }
 
         .dark-mode .nav-link:hover {
-            color: #c9a85a;
+            color: #ef4444;
         }
 
         .dark-mode .logo-text {
-            background: linear-gradient(to right, #c9a85a, #a8833f);
+            background: linear-gradient(to right, #ef4444, #dc2626);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .dark-mode .logo-subtitle {
-            color: #a3a3a3;
+            color: #9ca3af;
         }
 
         .dark-mode .hero-bg {
@@ -1088,11 +981,11 @@
         }
 
         .dark-mode .nosotros-section {
-            background: linear-gradient(135deg, #232323, #141414, #232323);
+            background: linear-gradient(135deg, #1f2937, #111827, #1e293b);
         }
 
         .dark-mode .section-title {
-            background: linear-gradient(to right, #fafaf9, #e7e5e4, #fafaf9);
+            background: linear-gradient(to right, #f9fafb, #e5e7eb, #f9fafb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -1101,81 +994,81 @@
         .dark-mode .stats-card,
         .dark-mode .info-card,
         .dark-mode .service-card {
-            background: rgba(35, 35, 35, 0.9);
-            border: 1px solid rgba(82, 82, 82, 0.3);
-            color: #e7e5e4;
+            background: rgba(31, 41, 55, 0.9);
+            border: 1px solid rgba(75, 85, 99, 0.3);
+            color: #e5e7eb;
         }
 
         .dark-mode .stats-card:hover,
         .dark-mode .info-card:hover,
         .dark-mode .service-card:hover {
-            background: rgba(35, 35, 35, 0.95);
+            background: rgba(31, 41, 55, 0.95);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .dark-mode .info-card-title,
         .dark-mode .service-title {
-            color: #fafaf9;
+            color: #f9fafb;
         }
 
         .dark-mode .info-card-text,
         .dark-mode .service-description {
-            color: #d4d4d4;
+            color: #d1d5db;
         }
 
         .dark-mode .hero-form {
-            background: linear-gradient(145deg, rgba(35, 35, 35, 0.95), rgba(20, 20, 20, 0.9));
-            border: 1px solid rgba(82, 82, 82, 0.3);
+            background: linear-gradient(145deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.9));
+            border: 1px solid rgba(75, 85, 99, 0.3);
         }
 
         .dark-mode .form-title {
-            background: linear-gradient(to right, #fafaf9, #e7e5e4);
+            background: linear-gradient(to right, #f9fafb, #e5e7eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .dark-mode .form-subtitle {
-            color: #a3a3a3;
+            color: #9ca3af;
         }
 
         .dark-mode .input-modern {
-            background: rgba(35, 35, 35, 0.8);
-            border: 2px solid rgba(82, 82, 82, 0.4);
-            color: #e7e5e4;
+            background: rgba(31, 41, 55, 0.8);
+            border: 2px solid rgba(75, 85, 99, 0.4);
+            color: #e5e7eb;
         }
 
         .dark-mode .input-modern:focus {
-            background: rgba(35, 35, 35, 0.9);
-            border-color: rgba(201, 168, 90, 0.6);
-            color: #fafaf9;
+            background: rgba(31, 41, 55, 0.9);
+            border-color: rgba(239, 68, 68, 0.6);
+            color: #f9fafb;
         }
 
         .dark-mode .input-modern:hover {
-            background: rgba(35, 35, 35, 0.85);
-            border-color: rgba(201, 168, 90, 0.4);
+            background: rgba(31, 41, 55, 0.85);
+            border-color: rgba(239, 68, 68, 0.4);
         }
 
         .dark-mode .floating-label label {
-            color: #a3a3a3;
-            background: linear-gradient(135deg, rgba(35, 35, 35, 0.9), rgba(20, 20, 20, 0.7));
+            color: #9ca3af;
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.9), rgba(17, 24, 39, 0.7));
         }
 
         .dark-mode .floating-label input:focus + label,
         .dark-mode .floating-label input:not(:placeholder-shown) + label,
         .dark-mode .floating-label select:focus + label,
         .dark-mode .floating-label select:not([value=""]) + label {
-            color: #c9a85a;
-            background: linear-gradient(135deg, rgba(201, 168, 90, 0.2), rgba(168, 131, 63, 0.1));
-            border: 1px solid rgba(201, 168, 90, 0.3);
+            color: #ef4444;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.1));
+            border: 1px solid rgba(239, 68, 68, 0.3);
         }
 
         .dark-mode .input-icon {
-            color: #737373;
+            color: #6b7280;
         }
 
         .dark-mode .floating-label:focus-within .input-icon {
-            color: #c9a85a;
+            color: #ef4444;
         }
 
         .dark-mode footer {
@@ -1187,51 +1080,51 @@
         }
 
         .dark-mode .text-gray-400 {
-            color: #a3a3a3 !important;
+            color: #9ca3af !important;
         }
 
         .dark-mode .text-gray-700 {
-            color: #e7e5e4 !important;
+            color: #e5e7eb !important;
         }
 
         .dark-mode .text-gray-900 {
-            color: #fafaf9 !important;
+            color: #f9fafb !important;
         }
 
         .dark-mode .text-gray-600 {
-            color: #d4d4d4 !important;
+            color: #d1d5db !important;
         }
 
         .dark-mode .bg-white {
-            background: #232323 !important;
+            background: #1f2937 !important;
         }
 
         .dark-mode .border-gray-200 {
-            border-color: #3d3d3d !important;
+            border-color: #374151 !important;
         }
 
         .dark-mode .border-gray-300 {
-            border-color: #525252 !important;
+            border-color: #4b5563 !important;
         }
 
         .dark-mode .border-gray-800 {
-            border-color: #3d3d3d !important;
+            border-color: #374151 !important;
         }
 
         .dark-mode .bg-gray-800 {
-            background: #141414 !important;
+            background: #111827 !important;
         }
 
         .dark-mode .bg-gray-50 {
-            background: #141414 !important;
+            background: #111827 !important;
         }
 
         .dark-mode .bg-gradient-to-br.from-gray-50.to-white {
-            background: linear-gradient(to bottom right, #232323, #141414) !important;
+            background: linear-gradient(to bottom right, #1f2937, #111827) !important;
         }
 
         .dark-mode .border-gray-100 {
-            border-color: #3d3d3d !important;
+            border-color: #374151 !important;
         }
     </style>
 
@@ -1413,17 +1306,17 @@
                             <div class="absolute inset-0 bg-gradient-to-br from-gray-700 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </button>
                         
-                        <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-gold-500 to-gold-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
+                        <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
-                            <div class="absolute inset-0 bg-gradient-to-br from-gold-600 to-gold-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-pink-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
-                        <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-steel-500 to-steel-700 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
+                        <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
-                            <div class="absolute inset-0 bg-gradient-to-br from-steel-600 to-steel-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </a>
                         <a href="#" class="group relative w-7 h-7 bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
                             <svg class="w-3 h-3 relative z-10" fill="currentColor" viewBox="0 0 24 24">
@@ -1458,11 +1351,11 @@
         
         <!-- Navigation Links -->
         <div class="space-y-4 mb-8">
-            <a href="#inicio" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-gold-600">Inicio</a>
-            <a href="#servicios" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-gold-600">Servicios</a>
-            <a href="#nosotros" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-gold-600">Nosotros</a>
-            <a href="#financiacion" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-gold-600">Financiación</a>
-            <a href="#contacto" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-gold-600">Contacto</a>
+            <a href="#inicio" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-red-600">Inicio</a>
+            <a href="#servicios" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-red-600">Servicios</a>
+            <a href="#nosotros" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-red-600">Nosotros</a>
+            <a href="#financiacion" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-red-600">Financiación</a>
+            <a href="#contacto" class="block py-3 px-4 text-lg font-semibold text-gray-700 hover:text-red-600">Contacto</a>
         </div>
         
         <!-- Contact Information -->
@@ -1471,7 +1364,7 @@
             
             <div class="px-4 py-3 bg-gray-50 rounded-lg mx-4">
                 <div class="flex items-center space-x-3 mb-2">
-                    <i class="fas fa-map-marker-alt text-gold-600"></i>
+                    <i class="fas fa-map-marker-alt text-red-600"></i>
                     <span class="text-sm font-medium text-gray-900">Dirección</span>
                 </div>
                 <p class="text-sm text-gray-600 ml-6">Calle 78 Num 6 - 47 barrio Sevilla</p>
@@ -1479,35 +1372,35 @@
             
             <div class="px-4 py-3 bg-gray-50 rounded-lg mx-4">
                 <div class="flex items-center space-x-3 mb-2">
-                    <i class="fas fa-phone text-gold-600"></i>
+                    <i class="fas fa-phone text-red-600"></i>
                     <span class="text-sm font-medium text-gray-900">Teléfono</span>
                 </div>
-                <a href="tel:3008994671" class="text-sm text-gold-600 font-semibold ml-6 hover:text-gold-700">300 899 4671</a>
+                <a href="tel:3008994671" class="text-sm text-red-600 font-semibold ml-6 hover:text-red-700">300 899 4671</a>
             </div>
             
             <div class="px-4 py-3 bg-gray-50 rounded-lg mx-4">
                 <div class="flex items-center space-x-3 mb-2">
-                    <i class="fas fa-envelope text-gold-600"></i>
+                    <i class="fas fa-envelope text-red-600"></i>
                     <span class="text-sm font-medium text-gray-900">Email</span>
                 </div>
-                <a href="mailto:calidadcdasantacruz@gmail.com" class="text-sm text-gold-600 font-semibold ml-6 hover:text-gold-700 break-all">calidadcdasantacruz@gmail.com</a>
+                <a href="mailto:calidadcdasantacruz@gmail.com" class="text-sm text-red-600 font-semibold ml-6 hover:text-red-700 break-all">calidadcdasantacruz@gmail.com</a>
             </div>
             
             <div class="px-4 py-3 bg-gray-50 rounded-lg mx-4">
                 <div class="flex items-center space-x-3 mb-2">
-                    <i class="fas fa-clock text-gold-600"></i>
+                    <i class="fas fa-clock text-red-600"></i>
                     <span class="text-sm font-medium text-gray-900">Horarios</span>
                 </div>
                 <div class="ml-6 space-y-1">
                     <p class="text-sm text-gray-600">Lun - Vie: 7:00 AM - 6:00 PM</p>
                     <p class="text-sm text-gray-600">Sábados: 7:00 AM - 3:00 PM</p>
-                    <p class="text-sm text-steel-600 font-medium">Domingos: Con cita previa</p>
+                    <p class="text-sm text-blue-600 font-medium">Domingos: Con cita previa</p>
                 </div>
             </div>
             
             <!-- WhatsApp Button -->
             <div class="px-4 mt-6">
-                <a href="https://wa.me/573008994671" target="_blank" class="w-full bg-gold-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-gold-700 transition-colors duration-300 flex items-center justify-center space-x-2">
+                <a href="https://wa.me/573008994671" target="_blank" class="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-300 flex items-center justify-center space-x-2">
                     <i class="fab fa-whatsapp text-xl"></i>
                     <span>Contactar por WhatsApp</span>
                 </a>
@@ -1520,27 +1413,19 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-white pr-0 lg:pr-8">
-                    <span class="hero-badge">
-                        <i class="fas fa-certificate"></i>Organismo de Inspección Tipo A · ISO/IEC 17020
-                    </span>
-                    <h1 class="hero-title">
-                        Revisión<br><span class="hero-title-gold">Técnico-Mecánica</span>
-                    </h1>
-                    <p class="hero-lead">
-                        Tu vehículo al día, rápido y sin complicaciones. Tecnología de punta y técnicos certificados.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/573008994671?text=Hola%2C%20quiero%20agendar%20mi%20revisi%C3%B3n%20t%C3%A9cnico-mec%C3%A1nica" target="_blank" rel="noopener" class="hero-cta-primary">
-                            <i class="fab fa-whatsapp text-2xl"></i>Agendar por WhatsApp
-                        </a>
-                        <button type="button" onclick="openModal('quotationModal')" class="hero-cta-secondary">
-                            <i class="fas fa-calculator"></i>Cotizar ahora
-                        </button>
+                    <div class="animate-float mb-8">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight">
+                            Revisión <span class="text-gradient bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Técnico-Mecánica</span>
+                        </h1>
                     </div>
-                    <div class="hero-stats">
-                        <div><strong>15.000+</strong><span>Vehículos atendidos</span></div>
-                        <div><strong>3+</strong><span>Años de experiencia</span></div>
-                        <div><strong>Tipo A</strong><span>Certificación oficial</span></div>
+                    <p class="text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed font-light max-w-none lg:max-w-2xl">
+                        Garantizamos la seguridad de tu vehículo con tecnología de punta y personal altamente calificado. 
+                        Cumplimos con todos los estándares nacionales para brindarte un servicio confiable y eficiente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <button onclick="openModal('quotationModal')" class="btn-modern text-white px-8 py-4 rounded-2xl text-lg font-bold hover:bg-white hover:text-dark transition-all duration-300 text-center">
+                            <i class="fas fa-calculator mr-3"></i>Cotizar ahora
+                        </button>
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -1655,7 +1540,7 @@
                                         <h4 class="font-bold text-gray-900 text-lg">Tecnología Avanzada</h4>
                                         <p class="text-gray-600">Equipos de última generación</p>
                                     </div>
-                                    <div class="w-12 h-12 bg-gold-600 rounded-full flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
                                         <i class="fas fa-cogs text-white"></i>
                                     </div>
                                 </div>
@@ -1668,7 +1553,7 @@
                 <div class="flex flex-col justify-center space-y-8">
                     <div class="space-y-8">
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-award text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1681,7 +1566,7 @@
                         </div>
                         
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-users text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1694,7 +1579,7 @@
                         </div>
                         
                         <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg">
+                            <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
                                 <i class="fas fa-leaf text-white text-2xl"></i>
                             </div>
                             <div>
@@ -1736,7 +1621,7 @@
                             medio ambiente a través de la Revisión Técnico-mecánica y de Emisiones Contaminantes.
                         </p>
                         <div class="text-center mt-4">
-                            <button onclick="showMissionDetails()" class="bg-gold-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gold-700 transition-colors">
+                            <button onclick="showMissionDetails()" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
                                 <i class="fas fa-info-circle mr-2"></i>Más detalles
                             </button>
                         </div>
@@ -1756,7 +1641,7 @@
                             realización de revisión técnico-mecánica y de emisiones contaminantes...
                         </p>
                         <div class="text-center mt-4">
-                            <button onclick="showVisionDetails()" class="bg-gold-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gold-700 transition-colors">
+                            <button onclick="showVisionDetails()" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
                                 <i class="fas fa-info-circle mr-2"></i>Leer completa
                             </button>
                         </div>
@@ -1776,7 +1661,7 @@
                             garantizando los más altos estándares de calidad en nuestros procesos.
                         </p>
                         <div class="text-center mt-4">
-                            <button onclick="showCertificationDetails()" class="bg-gold-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-gold-700 transition-colors">
+                            <button onclick="showCertificationDetails()" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition-colors">
                                 <i class="fas fa-info-circle mr-2"></i>Ver exclusiones
                             </button>
                         </div>
@@ -1895,24 +1780,24 @@
     <section id="financiacion" class="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-black relative overflow-hidden">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0">
-            <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-gold-500/20 to-gold-500/20 rounded-full filter blur-3xl animate-pulse"></div>
-            <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-steel-500/20 to-gold-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-gold-500/10 to-gold-500/10 rounded-full filter blur-3xl animate-pulse delay-500"></div>
+            <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-full filter blur-3xl animate-pulse delay-500"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Header -->
             <div class="text-center mb-12 lg:mb-20">
-                <div class="inline-flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 bg-gradient-to-br from-gold-600 via-gold-600 to-gold-600 rounded-full mb-6 lg:mb-8 shadow-2xl animate-bounce">
+                <div class="inline-flex items-center justify-center w-16 h-16 lg:w-24 lg:h-24 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 rounded-full mb-6 lg:mb-8 shadow-2xl animate-bounce">
                     <i class="fas fa-wallet text-white text-2xl lg:text-4xl"></i>
                 </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent mb-4 lg:mb-6">
                     Formas de Pago
                 </h2>
-                <div class="w-24 lg:w-40 h-1.5 lg:h-2 bg-gradient-to-r from-gold-500 via-steel-500 to-gold-500 mx-auto rounded-full mb-6 lg:mb-8 animate-pulse"></div>
+                <div class="w-24 lg:w-40 h-1.5 lg:h-2 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 mx-auto rounded-full mb-6 lg:mb-8 animate-pulse"></div>
                 <p class="text-lg lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
                     Múltiples opciones para que pagues de la manera más conveniente. 
-                    <span class="font-bold text-transparent bg-gradient-to-r from-gold-400 to-steel-400 bg-clip-text">¡Tu comodidad es nuestra prioridad!</span>
+                    <span class="font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text">¡Tu comodidad es nuestra prioridad!</span>
                 </p>
             </div>
             
@@ -1920,26 +1805,26 @@
             <div class="hidden lg:block mb-20">
                 <div class="relative">
                     <!-- Timeline Line -->
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-gold-500 via-steel-500 to-gold-500 rounded-full"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-green-500 via-blue-500 to-purple-500 rounded-full"></div>
                     
                     <!-- Timeline Items -->
                     <div class="space-y-16">
                         <!-- Sistecredito -->
                         <div class="flex items-center justify-between">
                             <div class="w-5/12 text-right pr-8">
-                                <div class="bg-gradient-to-r from-gold-600 to-gold-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-gold-500/30">
+                                <div class="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-green-500/30">
                                     <div class="flex items-center justify-end mb-4">
                                         <h3 class="text-3xl font-bold text-white mr-4">Sistecredito</h3>
                                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-2">
                                             <img src="https://cdasantacruz.com/cdasantacruz/credito/siscredito.png" alt="Sistecredito Logo" class="w-full h-full object-contain rounded-xl">
                                         </div>
                                     </div>
-                                    <p class="text-gold-100 mb-6 text-lg">
+                                    <p class="text-green-100 mb-6 text-lg">
                                         Financia hasta en <span class="font-bold text-white">6 cuotas</span> sin complicaciones. 
                                         Aprobación inmediata y sin papeleos extensos.
                                     </p>
                                     <div class="flex justify-end">
-                                        <button onclick="contactForFinancing('Sistecredito')" class="bg-white text-gold-700 px-6 py-3 rounded-xl font-bold hover:bg-gold-50 transition-all duration-300 shadow-lg">
+                                        <button onclick="contactForFinancing('Sistecredito')" class="bg-white text-green-700 px-6 py-3 rounded-xl font-bold hover:bg-green-50 transition-all duration-300 shadow-lg">
                                             <i class="fas fa-arrow-right mr-2"></i>
                                             Solicitar
                                         </button>
@@ -1948,7 +1833,7 @@
                             </div>
                             
                             <!-- Center Circle -->
-                            <div class="w-20 h-20 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
+                            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
                                 <i class="fas fa-check text-white text-2xl"></i>
                             </div>
                             
@@ -1960,24 +1845,24 @@
                             <div class="w-5/12"></div>
                             
                             <!-- Center Circle -->
-                            <div class="w-20 h-20 bg-gradient-to-br from-steel-500 to-steel-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
                                 <i class="fas fa-mobile-alt text-white text-2xl"></i>
                             </div>
                             
                             <div class="w-5/12 text-left pl-8">
-                                <div class="bg-gradient-to-r from-steel-600 to-steel-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-steel-500/30">
+                                <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-blue-500/30">
                                     <div class="flex items-center mb-4">
                                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mr-4 p-2">
                                             <img src="https://cdasantacruz.com/cdasantacruz/credito/addi.png" alt="Addi Logo" class="w-full h-full object-contain">
                                         </div>
                                         <h3 class="text-3xl font-bold text-white">Addi</h3>
                                     </div>
-                                    <p class="text-steel-100 mb-6 text-lg">
+                                    <p class="text-blue-100 mb-6 text-lg">
                                         Plataforma 100% digital. Hasta <span class="font-bold text-white">6 cuotas</span> 
                                         con respuesta en segundos. <span class="font-bold text-white">3 cuotas sin intereses</span>.
                                     </p>
                                     <div class="flex justify-start">
-                                        <button onclick="contactForFinancing('Addi')" class="bg-white text-steel-700 px-6 py-3 rounded-xl font-bold hover:bg-steel-50 transition-all duration-300 shadow-lg">
+                                        <button onclick="contactForFinancing('Addi')" class="bg-white text-blue-700 px-6 py-3 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 shadow-lg">
                                             <i class="fas fa-arrow-right mr-2"></i>
                                             Solicitar
                                         </button>
@@ -1989,19 +1874,19 @@
                         <!-- Credit Cards -->
                         <div class="flex items-center justify-between">
                             <div class="w-5/12 text-right pr-8">
-                                <div class="bg-gradient-to-r from-gold-600 to-gold-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-gold-500/30">
+                                <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-red-500/30">
                                     <div class="flex items-center justify-end mb-4">
                                         <h3 class="text-3xl font-bold text-white mr-4">Tarjetas</h3>
                                         <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
                                             <i class="fas fa-credit-card text-white text-2xl"></i>
                                         </div>
                                     </div>
-                                    <p class="text-gold-100 mb-6 text-lg">
+                                    <p class="text-red-100 mb-6 text-lg">
                                         Acepta <span class="font-bold text-white">Visa y Mastercard</span>. 
                                         Pago seguro y acumula beneficios con tu tarjeta.
                                     </p>
                                     <div class="flex justify-end">
-                                        <button onclick="contactForFinancing('Tarjetas de Crédito')" class="bg-white text-gold-700 px-6 py-3 rounded-xl font-bold hover:bg-gold-50 transition-all duration-300 shadow-lg">
+                                        <button onclick="contactForFinancing('Tarjetas de Crédito')" class="bg-white text-red-700 px-6 py-3 rounded-xl font-bold hover:bg-red-50 transition-all duration-300 shadow-lg">
                                             <i class="fas fa-arrow-right mr-2"></i>
                                             Usar Tarjeta
                                         </button>
@@ -2010,7 +1895,7 @@
                             </div>
                             
                             <!-- Center Circle -->
-                            <div class="w-20 h-20 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
+                            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-2xl z-10 border-4 border-white">
                                 <i class="fas fa-credit-card text-white text-2xl"></i>
                             </div>
                             
@@ -2023,7 +1908,7 @@
             <!-- Mobile Cards Layout (visible only on mobile) -->
             <div class="lg:hidden mb-12 space-y-8">
                 <!-- Sistecredito Card -->
-                <div class="bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl p-6 shadow-2xl border border-gold-500/30 transform hover:scale-105 transition-all duration-300">
+                <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6 shadow-2xl border border-green-500/30 transform hover:scale-105 transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2 mr-3">
@@ -2031,22 +1916,22 @@
                             </div>
                             <h3 class="text-xl font-bold text-white">Sistecredito</h3>
                         </div>
-                        <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
                             <i class="fas fa-check text-white"></i>
                         </div>
                     </div>
-                    <p class="text-gold-100 mb-6 text-sm leading-relaxed">
+                    <p class="text-green-100 mb-6 text-sm leading-relaxed">
                         Financia hasta en <span class="font-bold text-white">6 cuotas</span> sin complicaciones. 
                         Aprobación inmediata y sin papeleos extensos.
                     </p>
-                    <button onclick="contactForFinancing('Sistecredito')" class="w-full bg-white text-gold-700 py-3 px-4 rounded-xl font-bold hover:bg-gold-50 transition-all duration-300 shadow-lg">
+                    <button onclick="contactForFinancing('Sistecredito')" class="w-full bg-white text-green-700 py-3 px-4 rounded-xl font-bold hover:bg-green-50 transition-all duration-300 shadow-lg">
                         <i class="fas fa-arrow-right mr-2"></i>
                         Solicitar Sistecredito
                     </button>
                 </div>
                 
                 <!-- Addi Card -->
-                <div class="bg-gradient-to-br from-steel-600 to-steel-700 rounded-2xl p-6 shadow-2xl border border-steel-500/30 transform hover:scale-105 transition-all duration-300">
+                <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 shadow-2xl border border-blue-500/30 transform hover:scale-105 transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center p-2 mr-3">
@@ -2054,22 +1939,22 @@
                             </div>
                             <h3 class="text-xl font-bold text-white">Addi</h3>
                         </div>
-                        <div class="w-10 h-10 bg-steel-500 rounded-full flex items-center justify-center">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
                             <i class="fas fa-mobile-alt text-white"></i>
                         </div>
                     </div>
-                    <p class="text-steel-100 mb-6 text-sm leading-relaxed">
+                    <p class="text-blue-100 mb-6 text-sm leading-relaxed">
                         Plataforma 100% digital. Hasta <span class="font-bold text-white">6 cuotas</span> 
                         con respuesta en segundos. <span class="font-bold text-white">3 cuotas sin intereses</span>.
                     </p>
-                    <button onclick="contactForFinancing('Addi')" class="w-full bg-white text-steel-700 py-3 px-4 rounded-xl font-bold hover:bg-steel-50 transition-all duration-300 shadow-lg">
+                    <button onclick="contactForFinancing('Addi')" class="w-full bg-white text-blue-700 py-3 px-4 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 shadow-lg">
                         <i class="fas fa-arrow-right mr-2"></i>
                         Solicitar Addi
                     </button>
                 </div>
                 
                 <!-- Credit Cards Card -->
-                <div class="bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl p-6 shadow-2xl border border-gold-500/30 transform hover:scale-105 transition-all duration-300">
+                <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-6 shadow-2xl border border-red-500/30 transform hover:scale-105 transition-all duration-300">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-3">
@@ -2077,15 +1962,15 @@
                             </div>
                             <h3 class="text-xl font-bold text-white">Tarjetas de Crédito</h3>
                         </div>
-                        <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center">
+                        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
                             <i class="fas fa-credit-card text-white"></i>
                         </div>
                     </div>
-                    <p class="text-gold-100 mb-6 text-sm leading-relaxed">
+                    <p class="text-red-100 mb-6 text-sm leading-relaxed">
                         Acepta <span class="font-bold text-white">Visa y Mastercard</span>. 
                         Pago seguro y acumula beneficios con tu tarjeta.
                     </p>
-                    <button onclick="contactForFinancing('Tarjetas de Crédito')" class="w-full bg-white text-gold-700 py-3 px-4 rounded-xl font-bold hover:bg-gold-50 transition-all duration-300 shadow-lg">
+                    <button onclick="contactForFinancing('Tarjetas de Crédito')" class="w-full bg-white text-red-700 py-3 px-4 rounded-xl font-bold hover:bg-red-50 transition-all duration-300 shadow-lg">
                         <i class="fas fa-arrow-right mr-2"></i>
                         Usar Tarjeta
                     </button>
@@ -2095,26 +1980,26 @@
             <!-- Call to Action Section -->
             <div class="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-gray-700/50">
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-gold-500 to-steel-500 rounded-full flex items-center justify-center shadow-lg mx-auto mb-8 animate-pulse">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg mx-auto mb-8 animate-pulse">
                         <i class="fas fa-handshake text-white text-3xl"></i>
                     </div>
                     <h3 class="text-4xl font-bold text-white mb-6">¿Necesitas Ayuda para Elegir?</h3>
                     <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
                         Nuestro equipo te ayudará a encontrar la mejor opción de pago según tus necesidades. 
-                        <span class="font-semibold text-gold-400">¡Contáctanos ahora!</span>
+                        <span class="font-semibold text-green-400">¡Contáctanos ahora!</span>
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <a href="https://wa.me/573008994671?text=Hola, necesito información sobre las opciones de pago disponibles" target="_blank" class="group bg-gradient-to-r from-gold-600 to-gold-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center">
+                        <a href="https://wa.me/573008994671?text=Hola, necesito información sobre las opciones de pago disponibles" target="_blank" class="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center">
                             <i class="fab fa-whatsapp text-3xl mr-4 group-hover:animate-bounce"></i>
                             <span>Consultar Opciones</span>
                             <i class="fas fa-arrow-right ml-4 group-hover:translate-x-2 transition-transform duration-300"></i>
                         </a>
                         
                         <div class="flex items-center space-x-4 text-gray-400">
-                            <div class="w-2 h-2 bg-gold-500 rounded-full animate-pulse"></div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                             <span class="text-lg">Respuesta inmediata</span>
-                            <div class="w-2 h-2 bg-gold-500 rounded-full animate-pulse"></div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                         </div>
                     </div>
                 </div>
@@ -2123,24 +2008,24 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-24 bg-gradient-to-br from-slate-50 via-steel-50 to-steel-50 relative overflow-hidden">
+    <section id="contacto" class="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
         <!-- Background Decorations -->
-        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-500/10 to-gold-500/5 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-steel-500/10 to-gold-500/5 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-500/10 to-orange-500/5 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-purple-500/5 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Header -->
             <div class="text-center mb-20">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gold-600 to-gold-700 rounded-3xl mb-8 shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-500">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-red-600 to-red-700 rounded-3xl mb-8 shadow-2xl transform rotate-12 hover:rotate-0 transition-transform duration-500">
                     <i class="fas fa-headset text-white text-3xl"></i>
                 </div>
                 <h2 class="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-6">
                     Contáctanos
                 </h2>
-                <div class="w-32 h-1.5 bg-gradient-to-r from-gold-600 to-gold-700 mx-auto rounded-full mb-6"></div>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-red-600 to-red-700 mx-auto rounded-full mb-6"></div>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                     Estamos aquí para brindarte el mejor servicio de diagnóstico automotriz. 
-                    <span class="font-semibold text-gold-600">¡Contáctanos ahora!</span>
+                    <span class="font-semibold text-red-600">¡Contáctanos ahora!</span>
                 </p>
             </div>
             
@@ -2148,26 +2033,26 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
                 <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-map-marker-alt text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Nuestra Ubicación</h4>
                         <p class="text-gray-600 leading-relaxed">
                             Calle 78 Num 6 - 47<br>
                             Barrio Sevilla<br>
-                            <span class="font-semibold text-gold-600">CDA SANTA CRUZ SAS</span>
+                            <span class="font-semibold text-red-600">CDA SANTA CRUZ SAS</span>
                         </p>
                     </div>
                 </div>
                 
                 <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
                             <i class="fab fa-whatsapp text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">WhatsApp Directo</h4>
                         <p class="text-gray-600 mb-3">Chatea con nosotros ahora</p>
-                        <a href="https://wa.me/573008994671" target="_blank" class="inline-flex items-center px-4 py-2 bg-gold-600 text-white rounded-xl font-semibold hover:bg-gold-700 transition-colors duration-300">
+                        <a href="https://wa.me/573008994671" target="_blank" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300">
                             <i class="fab fa-whatsapp mr-2"></i>
                             300 899 4671
                         </a>
@@ -2176,12 +2061,12 @@
                 
                 <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-steel-600 to-steel-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-envelope text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Correo Electrónico</h4>
                         <p class="text-gray-600 mb-3">Escríbenos tus consultas</p>
-                        <a href="mailto:calidadcdasantacruz@gmail.com" class="text-steel-600 font-semibold hover:text-steel-700 transition-colors duration-300 text-sm break-all">
+                        <a href="mailto:calidadcdasantacruz@gmail.com" class="text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-300 text-sm break-all">
                             calidadcdasantacruz@gmail.com
                         </a>
                     </div>
@@ -2189,22 +2074,22 @@
                 
                 <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500 group">
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 mx-auto mb-4">
                             <i class="fas fa-clock text-white text-xl"></i>
                         </div>
                         <h4 class="text-xl font-bold text-gray-900 mb-3">Horarios de Atención</h4>
                         <div class="space-y-2 text-gray-600 text-sm">
                             <div class="flex justify-between">
                                 <span class="font-medium">Lun - Vie:</span>
-                                <span class="text-gold-600 font-semibold">7:00 - 18:00</span>
+                                <span class="text-purple-600 font-semibold">7:00 - 18:00</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="font-medium">Sábados:</span>
-                                <span class="text-gold-600 font-semibold">7:00 - 15:00</span>
+                                <span class="text-purple-600 font-semibold">7:00 - 15:00</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="font-medium">Domingos:</span>
-                                <span class="text-steel-600 font-semibold">Con cita previa</span>
+                                <span class="text-blue-600 font-semibold">Con cita previa</span>
                             </div>
                         </div>
                     </div>
@@ -2218,13 +2103,13 @@
                         <h3 class="text-3xl font-bold text-gray-900 mb-2">Encuéntranos Aquí</h3>
                         <p class="text-gray-600">Visítanos en nuestras modernas instalaciones</p>
                     </div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-2xl flex items-center justify-center shadow-lg">
                         <i class="fas fa-map-marked-alt text-white text-2xl"></i>
                     </div>
                 </div>
                 
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
-                    <div class="absolute inset-0 bg-gradient-to-r from-gold-600/20 to-steel-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-red-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.123456789!2d-75.123456!3d8.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5a2f4db5f4906d%3A0xd29a710bdf01d87b!2sCDA%20SANTA%20CRUZ%20S.A.S!5e0!3m2!1ses-419!2sco!4v1234567890!5m2!1ses-419!2sco" 
                             width="100%" 
                             height="500" 
@@ -2236,13 +2121,13 @@
                     </iframe>
                 </div>
                 
-                <div class="mt-6 p-6 bg-gradient-to-r from-gold-50 to-steel-50 rounded-2xl border border-gold-100">
+                <div class="mt-6 p-6 bg-gradient-to-r from-red-50 to-blue-50 rounded-2xl border border-red-100">
                     <div class="flex items-center justify-center space-x-4">
-                        <div class="w-3 h-3 bg-gold-600 rounded-full animate-pulse"></div>
+                        <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
                         <p class="text-gray-700 font-semibold text-center">
                             📍 Calle 78 Num 6 - 47, Barrio Sevilla - CDA SANTA CRUZ SAS
                         </p>
-                        <div class="w-3 h-3 bg-gold-600 rounded-full animate-pulse"></div>
+                        <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
                     </div>
                 </div>
             </div>
@@ -2254,7 +2139,7 @@
                         <h3 class="text-3xl font-bold text-gray-900 mb-2">Agenda tu Cita</h3>
                         <p class="text-gray-600">Completa el formulario y te contactaremos de inmediato</p>
                     </div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-gold-600 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg animate-pulse">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl flex items-center justify-center shadow-lg animate-pulse">
                         <i class="fas fa-calendar-check text-white text-2xl"></i>
                     </div>
                 </div>
@@ -2262,7 +2147,7 @@
                 <form class="space-y-6" onsubmit="handleFormSubmit(event)">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="floating-label">
-                            <input type="text" required name="name" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500" placeholder=" ">
+                            <input type="text" required name="name" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500" placeholder=" ">
                             <label>Nombre Completo</label>
                             <div class="input-icon">
                                 <i class="fas fa-user"></i>
@@ -2270,7 +2155,7 @@
                         </div>
                         
                         <div class="floating-label">
-                            <input type="tel" required name="phone" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500" placeholder=" " pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="15">
+                            <input type="tel" required name="phone" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500" placeholder=" " pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="15">
                             <label>Teléfono</label>
                             <div class="input-icon">
                                 <i class="fas fa-phone"></i>
@@ -2280,7 +2165,7 @@
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="floating-label">
-                            <input type="text" required name="plate" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500" placeholder=" " style="text-transform: uppercase;">
+                            <input type="text" required name="plate" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500" placeholder=" " style="text-transform: uppercase;">
                             <label>Placa del Vehículo</label>
                             <div class="input-icon">
                                 <i class="fas fa-id-card"></i>
@@ -2288,7 +2173,7 @@
                         </div>
                         
                         <div class="floating-label">
-                            <select required name="service" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500">
+                            <select required name="service" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500">
                                 <option value="">Selecciona un servicio</option>
                                 <option value="tecnico-mecanica">Técnico Mecánica</option>
                                 <option value="soat">SOAT</option>
@@ -2305,7 +2190,7 @@
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <div class="floating-label">
-                            <input type="date" required name="date" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500" min="" onchange="updateContactTimeOptions(this.value)">
+                            <input type="date" required name="date" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500" min="" onchange="updateContactTimeOptions(this.value)">
                             <label>Fecha Preferida</label>
                             <div class="input-icon">
                                 <i class="fas fa-calendar-alt"></i>
@@ -2313,7 +2198,7 @@
                         </div>
                         
                         <div class="floating-label">
-                            <select required name="time" id="contactTimeSelect" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500">
+                            <select required name="time" id="contactTimeSelect" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500">
                                 <option value="">Selecciona hora</option>
                             </select>
                             <label>Hora Preferida</label>
@@ -2324,15 +2209,15 @@
                     </div>
                     
                     <div class="floating-label">
-                        <textarea rows="4" name="message" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-gold-500 resize-none" placeholder=" "></textarea>
+                        <textarea rows="4" name="message" class="input-modern bg-white/90 border-2 border-gray-200 focus:border-red-500 resize-none" placeholder=" "></textarea>
                         <label>Mensaje Adicional (Opcional)</label>
                         <div class="input-icon">
                             <i class="fas fa-comment"></i>
                         </div>
                     </div>
                     
-                    <button type="submit" class="w-full bg-gradient-to-r from-gold-600 via-gold-700 to-gold-800 text-white py-4 px-8 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden group">
-                        <div class="absolute inset-0 bg-gradient-to-r from-gold-700 via-gold-800 to-gold-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-4 px-8 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-700 via-red-800 to-red-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="relative flex items-center justify-center space-x-3">
                             <i class="fab fa-whatsapp text-2xl"></i>
                             <span>Enviar por WhatsApp</span>
@@ -2354,9 +2239,9 @@
     <footer class="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white py-20 overflow-hidden">
         <!-- Background decorations similar to banner -->
         <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-gold-600/20 to-gold-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-steel-600/20 to-gold-500/10 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-gold-500/10 to-steel-500/10 rounded-full filter blur-3xl animate-pulse"></div>
+            <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-600/20 to-orange-500/10 rounded-full filter blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-600/20 to-purple-500/10 rounded-full filter blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-red-500/10 to-blue-500/10 rounded-full filter blur-3xl animate-pulse"></div>
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -2370,7 +2255,7 @@
                             <div class="text-3xl font-bold bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
                                 CDA SANTA CRUZ S.A.S
                             </div>
-                            <div class="text-gold-400 font-semibold text-lg">Centro de Diagnóstico Automotor</div>
+                            <div class="text-red-400 font-semibold text-lg">Centro de Diagnóstico Automotor</div>
                         </div>
                     </div>
                     <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
@@ -2381,7 +2266,7 @@
                     <!-- Contact Info Cards -->
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                            <div class="w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-lg flex items-center justify-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-map-marker-alt text-white"></i>
                             </div>
                             <div>
@@ -2391,11 +2276,11 @@
                         </div>
                         
                         <div class="flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-                            <div class="w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-lg flex items-center justify-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
                                 <i class="fab fa-whatsapp text-white"></i>
                             </div>
                             <div>
-                                <a href="https://wa.me/573008994671" class="text-white font-semibold hover:text-gold-400 transition-colors">
+                                <a href="https://wa.me/573008994671" class="text-white font-semibold hover:text-green-400 transition-colors">
                                     300 899 4671
                                 </a>
                                 <p class="text-gray-400">WhatsApp disponible</p>
@@ -2406,37 +2291,37 @@
                 
                 <!-- Services -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-8 bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
+                    <h3 class="text-2xl font-bold mb-8 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
                         Nuestros Servicios
                     </h3>
                     <ul class="space-y-4">
                         <li>
                             <a href="#servicios" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                                <i class="fas fa-wrench text-gold-500 group-hover:text-gold-400 transition-colors"></i>
+                                <i class="fas fa-wrench text-red-500 group-hover:text-red-400 transition-colors"></i>
                                 <span>Técnico Mecánica</span>
                             </a>
                         </li>
                         <li>
                             <a href="#servicios" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                                <i class="fas fa-shield-alt text-gold-500 group-hover:text-gold-400 transition-colors"></i>
+                                <i class="fas fa-shield-alt text-red-500 group-hover:text-red-400 transition-colors"></i>
                                 <span>SOAT</span>
                             </a>
                         </li>
                         <li>
                             <a href="#servicios" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                                <i class="fas fa-car text-gold-500 group-hover:text-gold-400 transition-colors"></i>
+                                <i class="fas fa-car text-red-500 group-hover:text-red-400 transition-colors"></i>
                                 <span>Seguros Todo Riesgo</span>
                             </a>
                         </li>
                         <li>
                             <a href="#servicios" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                                <i class="fas fa-truck text-gold-500 group-hover:text-gold-400 transition-colors"></i>
+                                <i class="fas fa-truck text-red-500 group-hover:text-red-400 transition-colors"></i>
                                 <span>Servicio de Grúas</span>
                             </a>
                         </li>
                         <li>
                             <a href="#servicios" class="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
-                                <i class="fas fa-file-alt text-gold-500 group-hover:text-gold-400 transition-colors"></i>
+                                <i class="fas fa-file-alt text-red-500 group-hover:text-red-400 transition-colors"></i>
                                 <span>Trámites Vehiculares</span>
                             </a>
                         </li>
@@ -2445,21 +2330,21 @@
                 
                 <!-- Quick Links & Social -->
                 <div>
-                    <h3 class="text-2xl font-bold mb-8 bg-gradient-to-r from-steel-400 to-steel-600 bg-clip-text text-transparent">
+                    <h3 class="text-2xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                         Enlaces Rápidos
                     </h3>
                     <ul class="space-y-4 mb-8">
                         <li><a href="#inicio" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-                            <i class="fas fa-home text-steel-500"></i> Inicio
+                            <i class="fas fa-home text-blue-500"></i> Inicio
                         </a></li>
                         <li><a href="#nosotros" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-                            <i class="fas fa-users text-steel-500"></i> Nosotros
+                            <i class="fas fa-users text-blue-500"></i> Nosotros
                         </a></li>
                         <li><a href="#financiacion" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-                            <i class="fas fa-credit-card text-steel-500"></i> Financiación
+                            <i class="fas fa-credit-card text-blue-500"></i> Financiación
                         </a></li>
                         <li><a href="#contacto" class="text-gray-300 hover:text-white transition-colors flex items-center gap-2">
-                            <i class="fas fa-phone text-steel-500"></i> Contacto
+                            <i class="fas fa-phone text-blue-500"></i> Contacto
                         </a></li>
                     </ul>
                     
@@ -2467,13 +2352,13 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4 text-white">Síguenos</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="group w-12 h-12 bg-gradient-to-br from-steel-600 to-steel-700 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <a href="#" class="group w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 <i class="fab fa-facebook-f text-white group-hover:scale-110 transition-transform"></i>
                             </a>
-                            <a href="#" class="group w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-600 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <a href="#" class="group w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 <i class="fab fa-instagram text-white group-hover:scale-110 transition-transform"></i>
                             </a>
-                            <a href="https://wa.me/573008994671" target="_blank" class="group w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            <a href="https://wa.me/573008994671" target="_blank" class="group w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 <i class="fab fa-whatsapp text-white group-hover:scale-110 transition-transform"></i>
                             </a>
                         </div>
@@ -2494,8 +2379,8 @@
                     </div>
 
                     <div class="flex items-center gap-6 text-sm">
-                        <div class="flex items-center gap-2 text-gold-400">
-                            <div class="w-2.5 h-2.5 bg-gold-500 rounded-full animate-pulse"></div>
+                        <div class="flex items-center gap-2 text-green-400">
+                            <div class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
                             <span class="font-semibold whitespace-nowrap">Servicio Activo</span>
                         </div>
                         <div class="text-gray-400 whitespace-nowrap">
@@ -2508,7 +2393,7 @@
             <!-- Developer Credit -->
             <div class="border-t border-white/5 pt-4 pb-6">
                 <p class="text-center text-gray-500 text-xs">
-                    Desarrollado por <a href="https://www.instagram.com/amei_group/" target="_blank" rel="noopener noreferrer" class="text-gold-400 hover:text-gold-300 transition-colors font-semibold hover:underline">amei_group</a>
+                    Desarrollado por <a href="https://www.instagram.com/amei_group/" target="_blank" rel="noopener noreferrer" class="text-red-400 hover:text-red-300 transition-colors font-semibold hover:underline">amei_group</a>
                 </p>
             </div>
 
@@ -2533,24 +2418,24 @@
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
-                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
-                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="15">
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="15">
                         </div>
                     </div>
                     
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
                     </div>
                     
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Vehículo</label>
-                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
                                 <option value="">Selecciona tipo</option>
                                 <option value="automovil">Automóvil</option>
                                 <option value="camioneta">Camioneta</option>
@@ -2562,7 +2447,7 @@
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Año del Vehículo</label>
-                            <input type="number" min="1990" max="2024" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                            <input type="number" min="1990" max="2024" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
                         </div>
                     </div>
                     
@@ -2570,23 +2455,23 @@
                         <label class="block text-sm font-medium text-gray-700 mb-3">Servicios Requeridos</label>
                         <div class="grid md:grid-cols-2 gap-3">
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-3 text-gold-600 focus:ring-gold-600">
+                                <input type="checkbox" class="mr-3 text-red-600 focus:ring-red-600">
                                 <span>Técnico Mecánica</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-3 text-gold-600 focus:ring-gold-600">
+                                <input type="checkbox" class="mr-3 text-red-600 focus:ring-red-600">
                                 <span>SOAT</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-3 text-gold-600 focus:ring-gold-600">
+                                <input type="checkbox" class="mr-3 text-red-600 focus:ring-red-600">
                                 <span>Seguros Todo Riesgo</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-3 text-gold-600 focus:ring-gold-600">
+                                <input type="checkbox" class="mr-3 text-red-600 focus:ring-red-600">
                                 <span>Servicio de Grúas</span>
                             </label>
                             <label class="flex items-center">
-                                <input type="checkbox" class="mr-3 text-gold-600 focus:ring-gold-600">
+                                <input type="checkbox" class="mr-3 text-red-600 focus:ring-red-600">
                                 <span>Trámites Vehiculares</span>
                             </label>
                         </div>
@@ -2594,14 +2479,14 @@
                     
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">Comentarios Adicionales</label>
-                        <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-600 focus:border-transparent" placeholder="Describe cualquier problema específico o solicitud especial..."></textarea>
+                        <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent" placeholder="Describe cualquier problema específico o solicitud especial..."></textarea>
                     </div>
                     
                     <div class="flex gap-4">
                         <button type="button" onclick="closeModal('quotationModal')" class="flex-1 bg-gray-300 text-gray-700 py-3 px-6 rounded-lg font-semibold hover:bg-gray-400 transition duration-300">
                             Cancelar
                         </button>
-                        <button type="submit" class="flex-1 bg-gold-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gold-700 transition duration-300">
+                        <button type="submit" class="flex-1 bg-red-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-red-700 transition duration-300">
                             <i class="fas fa-paper-plane mr-2"></i>
                             Solicitar Cotización
                         </button>
@@ -3053,7 +2938,7 @@
                                     <img src="logocda.png" alt="CDA Santa Cruz Logo" class="w-16 h-20 object-contain">
                                     <div>
                                         <h3 class="text-2xl font-bold text-gray-900">${service.title}</h3>
-                                        <div class="w-16 h-1 bg-gradient-to-r from-gold-600 to-gold-700 rounded-full mt-2"></div>
+                                        <div class="w-16 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mt-2"></div>
                                     </div>
                                 </div>
                                 <button onclick="closeServiceModal()" class="text-gray-400 hover:text-gray-600 text-2xl">
@@ -3063,8 +2948,8 @@
                             
                             <!-- Service Description -->
                             ${service.description ? `
-                                <div class="bg-gradient-to-r from-steel-50 to-steel-50 p-6 rounded-xl border border-steel-100 mb-6">
-                                    <h4 class="font-bold text-steel-800 mb-3 flex items-center">
+                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 mb-6">
+                                    <h4 class="font-bold text-blue-800 mb-3 flex items-center">
                                         <i class="fas fa-info-circle mr-2"></i>
                                         ¿Qué es este servicio?
                                     </h4>
@@ -3075,13 +2960,13 @@
                             <!-- Service Details -->
                             <div class="mb-6">
                                 <h4 class="font-bold text-gray-900 mb-4 flex items-center text-lg">
-                                    <i class="fas fa-list-check mr-2 text-gold-600"></i>
+                                    <i class="fas fa-list-check mr-2 text-green-600"></i>
                                     Incluye:
                                 </h4>
                                 <div class="grid gap-3">
                                     ${service.details.map(detail => `
-                                        <div class="flex items-start gap-3 bg-gold-50 p-3 rounded-lg border border-gold-100">
-                                            <i class="fas fa-check text-gold-600 mt-1 text-sm"></i>
+                                        <div class="flex items-start gap-3 bg-green-50 p-3 rounded-lg border border-green-100">
+                                            <i class="fas fa-check text-green-600 mt-1 text-sm"></i>
                                             <span class="text-gray-700">${detail}</span>
                                         </div>
                                     `).join('')}
@@ -3092,14 +2977,14 @@
                             ${service.pricing ? `
                                 <div class="mb-6">
                                     <h4 class="font-bold text-gray-900 mb-4 flex items-center text-lg">
-                                        <i class="fas fa-tags mr-2 text-gold-600"></i>
+                                        <i class="fas fa-tags mr-2 text-red-600"></i>
                                         Tarifas RTM:
                                     </h4>
                                     <div class="grid gap-3">
                                         ${service.pricing.map(item => `
-                                            <div class="flex justify-between items-center bg-gold-50 p-4 rounded-lg border border-gold-100">
+                                            <div class="flex justify-between items-center bg-red-50 p-4 rounded-lg border border-red-100">
                                                 <span class="font-semibold text-gray-800">${item.type}</span>
-                                                <span class="text-2xl font-bold text-gold-600">${item.price}</span>
+                                                <span class="text-2xl font-bold text-red-600">${item.price}</span>
                                             </div>
                                         `).join('')}
                                     </div>
@@ -3108,12 +2993,12 @@
                             
                             <!-- Special Note -->
                             ${service.note ? `
-                                <div class="bg-gold-50 p-4 rounded-lg border border-gold-200 mb-6">
+                                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mb-6">
                                     <div class="flex items-start gap-3">
-                                        <i class="fas fa-exclamation-triangle text-gold-600 mt-1"></i>
+                                        <i class="fas fa-exclamation-triangle text-yellow-600 mt-1"></i>
                                         <div>
-                                            <h5 class="font-semibold text-gold-800 mb-1">Importante:</h5>
-                                            <p class="text-gold-700 text-sm">${service.note}</p>
+                                            <h5 class="font-semibold text-yellow-800 mb-1">Importante:</h5>
+                                            <p class="text-yellow-700 text-sm">${service.note}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3121,11 +3006,11 @@
                             
                             <!-- Action Buttons -->
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <button onclick="openModal('quotationModal'); closeServiceModal();" class="bg-gold-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-gold-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+                                <button onclick="openModal('quotationModal'); closeServiceModal();" class="bg-red-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
                                     <i class="fas fa-calculator mr-2"></i>
                                     Solicitar Cotización
                                 </button>
-                                <a href="https://wa.me/573008994671?text=Hola, quiero información detallada sobre ${service.title}" target="_blank" class="bg-gold-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-gold-700 transition-colors text-center shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
+                                <a href="https://wa.me/573008994671?text=Hola, quiero información detallada sobre ${service.title}" target="_blank" class="bg-green-600 text-white py-4 px-6 rounded-xl font-bold hover:bg-green-700 transition-colors text-center shadow-lg hover:shadow-xl transform hover:scale-105 duration-300">
                                     <i class="fab fa-whatsapp mr-2"></i>
                                     Consultar por WhatsApp
                                 </a>
@@ -3192,7 +3077,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-bullseye text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Nuestra Misión</h2>
@@ -3203,8 +3088,8 @@ Por favor, envíenme detalles sobre:
                             </div>
                             
                             <div class="space-y-6">
-                                <div class="bg-gradient-to-r from-gold-50 to-gold-50 p-6 rounded-xl border border-gold-100">
-                                    <h3 class="text-xl font-bold text-gold-800 mb-4">Compromiso Principal</h3>
+                                <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border border-red-100">
+                                    <h3 class="text-xl font-bold text-red-800 mb-4">Compromiso Principal</h3>
                                     <p class="text-gray-700 text-lg leading-relaxed">
                                         Contribuir de forma sustancial en la <strong>reducción de accidentalidad vial</strong> y 
                                         <strong>cuidado del medio ambiente</strong> a través de la Revisión Técnico-mecánica y de 
@@ -3213,10 +3098,10 @@ Por favor, envíenme detalles sobre:
                                 </div>
                                 
                                 <div class="grid md:grid-cols-2 gap-6">
-                                    <div class="bg-steel-50 p-6 rounded-xl border border-steel-100">
+                                    <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
                                         <div class="flex items-center mb-3">
-                                            <i class="fas fa-shield-alt text-steel-600 text-2xl mr-3"></i>
-                                            <h4 class="text-lg font-bold text-steel-800">Seguridad Vial</h4>
+                                            <i class="fas fa-shield-alt text-blue-600 text-2xl mr-3"></i>
+                                            <h4 class="text-lg font-bold text-blue-800">Seguridad Vial</h4>
                                         </div>
                                         <p class="text-gray-700">
                                             Garantizamos que cada vehículo inspeccionado cumpla con los estándares de seguridad 
@@ -3224,10 +3109,10 @@ Por favor, envíenme detalles sobre:
                                         </p>
                                     </div>
                                     
-                                    <div class="bg-gold-50 p-6 rounded-xl border border-gold-100">
+                                    <div class="bg-green-50 p-6 rounded-xl border border-green-100">
                                         <div class="flex items-center mb-3">
-                                            <i class="fas fa-leaf text-gold-600 text-2xl mr-3"></i>
-                                            <h4 class="text-lg font-bold text-gold-800">Medio Ambiente</h4>
+                                            <i class="fas fa-leaf text-green-600 text-2xl mr-3"></i>
+                                            <h4 class="text-lg font-bold text-green-800">Medio Ambiente</h4>
                                         </div>
                                         <p class="text-gray-700">
                                             Controlamos las emisiones contaminantes para contribuir a un aire más limpio 
@@ -3253,7 +3138,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-eye text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Nuestra Visión 2030</h2>
@@ -3264,8 +3149,8 @@ Por favor, envíenme detalles sobre:
                             </div>
                             
                             <div class="space-y-6">
-                                <div class="bg-gradient-to-r from-steel-50 to-gold-50 p-6 rounded-xl border border-steel-100">
-                                    <h3 class="text-xl font-bold text-steel-800 mb-4">Visión Completa</h3>
+                                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl border border-blue-100">
+                                    <h3 class="text-xl font-bold text-blue-800 mb-4">Visión Completa</h3>
                                     <p class="text-gray-700 text-lg leading-relaxed">
                                         <strong>CDA SANTA CRUZ SAS</strong> para el año <strong>2030</strong> será la empresa líder en 
                                         <strong>Córdoba</strong> en realización de revisión técnico-mecánica y de emisiones contaminantes, 
@@ -3275,21 +3160,21 @@ Por favor, envíenme detalles sobre:
                                 </div>
                                 
                                 <div class="grid md:grid-cols-3 gap-4">
-                                    <div class="bg-gold-50 p-4 rounded-xl border border-gold-100 text-center">
-                                        <i class="fas fa-trophy text-gold-600 text-3xl mb-3"></i>
-                                        <h4 class="font-bold text-gold-800">Liderazgo</h4>
+                                    <div class="bg-red-50 p-4 rounded-xl border border-red-100 text-center">
+                                        <i class="fas fa-trophy text-red-600 text-3xl mb-3"></i>
+                                        <h4 class="font-bold text-red-800">Liderazgo</h4>
                                         <p class="text-sm text-gray-700">Empresa líder en Córdoba</p>
                                     </div>
                                     
-                                    <div class="bg-steel-50 p-4 rounded-xl border border-steel-100 text-center">
-                                        <i class="fas fa-star text-steel-600 text-3xl mb-3"></i>
-                                        <h4 class="font-bold text-steel-800">Calidad</h4>
+                                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center">
+                                        <i class="fas fa-star text-blue-600 text-3xl mb-3"></i>
+                                        <h4 class="font-bold text-blue-800">Calidad</h4>
                                         <p class="text-sm text-gray-700">Alta calidad y eficiencia</p>
                                     </div>
                                     
-                                    <div class="bg-gold-50 p-4 rounded-xl border border-gold-100 text-center">
-                                        <i class="fas fa-calendar-alt text-gold-600 text-3xl mb-3"></i>
-                                        <h4 class="font-bold text-gold-800">Meta 2030</h4>
+                                    <div class="bg-green-50 p-4 rounded-xl border border-green-100 text-center">
+                                        <i class="fas fa-calendar-alt text-green-600 text-3xl mb-3"></i>
+                                        <h4 class="font-bold text-green-800">Meta 2030</h4>
                                         <p class="text-sm text-gray-700">Objetivo a largo plazo</p>
                                     </div>
                                 </div>
@@ -3311,7 +3196,7 @@ Por favor, envíenme detalles sobre:
                         <div class="p-8">
                             <div class="flex items-center justify-between mb-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-12 h-12 bg-gradient-to-br from-gold-600 to-gold-700 rounded-xl flex items-center justify-center">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
                                         <i class="fas fa-certificate text-white text-xl"></i>
                                     </div>
                                     <h2 class="text-3xl font-bold text-gray-900">Certificación ISO/IEC 17020:2012</h2>
@@ -3322,16 +3207,16 @@ Por favor, envíenme detalles sobre:
                             </div>
                             
                             <div class="space-y-6">
-                                <div class="bg-gradient-to-r from-steel-50 to-steel-50 p-6 rounded-xl border border-steel-100">
-                                    <h3 class="text-xl font-bold text-steel-800 mb-4">Organismo de Inspección Tipo A</h3>
+                                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+                                    <h3 class="text-xl font-bold text-blue-800 mb-4">Organismo de Inspección Tipo A</h3>
                                     <p class="text-gray-700 text-lg leading-relaxed">
                                         CDA SANTA CRUZ SAS opera exclusivamente como <strong>Organismo de Inspección Tipo A</strong>, 
                                         garantizando independencia total y los más altos estándares de calidad en nuestros procesos de inspección.
                                     </p>
                                 </div>
                                 
-                                <div class="bg-gold-50 p-6 rounded-xl border border-gold-200">
-                                    <h3 class="text-xl font-bold text-gold-800 mb-4">
+                                <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+                                    <h3 class="text-xl font-bold text-green-800 mb-4">
                                         <i class="fas fa-check-circle mr-2"></i>
                                         Garantía de Calidad
                                     </h3>
